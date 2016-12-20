@@ -3,12 +3,34 @@
   <head>
     <title>MuskokaApp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
   <body>
+
+    <div class="container-fluid">
+      <ul class="nav nav-pills navbar-right">
+        <li role="presentation"><%= link_to 'Home', root_path %></li>
+        <li role="presentation"><%= link_to 'Enter', new_user_path %></li>
+        <!-- Will lead to User#New -->
+        <li role="presentation"><%= link_to 'Vote', entries_path %></li>
+        <!-- Will lead to Entries#Index -->
+        <li role="presentation"><%= link_to 'About', about_path %></li>
+        <!-- Will lead to Description Page -->
+        <% if current_user %>
+        <li role="presentation"><%= link_to 'Logout', session_path("current"), :method => :delete %></a></li>
+        <% else %>
+        <li role="presentation"><%= link_to 'Login', new_session_path %>
+        <!-- Will lead to Login Page/ render partial for signup -->
+        <% end %>
+      </ul>
+    </div>
+
+
+
     <%= yield %>
   </body>
 </html>

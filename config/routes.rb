@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  root 'users#home'
+
+  get '/about' => 'users#about'
+
   resources :users
 
   resources :entries

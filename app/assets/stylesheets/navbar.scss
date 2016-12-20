@@ -1,0 +1,17 @@
+.navbar-right {
+  margin: 20px;
+  padding-right: 30px;
+}
+
+.nav-pills>li>a {
+  color: black !important;
+}
+
+.nav-pills>li {
+  padding-right: 40px;
+}
+
+.nav-pills>li.active>a {
+  color: grey !important;
+  background-color: transparent !important;
+}
