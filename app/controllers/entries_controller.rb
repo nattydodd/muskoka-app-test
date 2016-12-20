@@ -1,14 +1,19 @@
 class EntriesController < ApplicationController
+
+  before_action :ensure_logged_in
+
   def index
     @entries = Entry.all
   end
 
   def new
-    @entry = Entry.new
+    @entry = Entry.new(:user_id => params[:user])
   end
 
   def create
     @entry = Entry.new(entry_params)
+    @entry.user_id = current_user.id
+    @entry.name = current_user.name
 
     if @entry.save
       redirect_to entries_url

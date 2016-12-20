@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-  def new
+  def create
     user = User.find_by_email(params[:email])
    # If the user exists AND the password entered is correct.
    if user && user.authenticate(params[:password])
@@ -10,11 +10,11 @@ class SessionsController < ApplicationController
      redirect_to user_url(user), notice: "Logged in"
    else flash.now[:alert] = "Invalid email or password"
    # If user's login doesn't work, send them back to the login form.
-     render "new"
+    #  render "new"
    end
   end
 
-  def create
+  def new
   end
 
   def destroy

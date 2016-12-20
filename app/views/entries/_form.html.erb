@@ -1,0 +1,32 @@
+<%= form_for @entry, html: { multipart: true } do |f| %>
+
+  <% if @entry.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% @entry.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field(:avatar_cache) %>
+  </div> <br>
+
+
+
+
+  <div class="field">
+    <%= f.label :story %> <br>
+    <%= f.text_field :story %>
+  </div> <br>
+
+  <div class="actions">
+    <%= f.submit 'Submit' %>
+  </div>
+
+<% end %>
