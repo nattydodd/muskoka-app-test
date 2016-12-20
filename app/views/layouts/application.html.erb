@@ -21,7 +21,14 @@
         <li role="presentation"><%= link_to 'About', about_path %></li>
         <!-- Will lead to Description Page -->
         <% if current_user %>
-        <li role="presentation"><%= link_to 'Logout', session_path("current"), :method => :delete %></a></li>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %><span class="caret"></span>
+          </a>
+        <ul class="dropdown-menu">
+          <li role="presentation"><%= link_to 'Profile', user_path(current_user) %></li>
+          <li role="presentation"><%= link_to 'Logout', session_path("current"), :method => :delete %></a></li>
+        </ul>
         <% else %>
         <li role="presentation"><%= link_to 'Login', new_session_path %>
         <!-- Will lead to Login Page/ render partial for signup -->

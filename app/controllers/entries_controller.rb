@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
     @entry.name = current_user.name
 
     if @entry.save
-      redirect_to entries_url
+      redirect_to user_url(current_user)
     else
       render :new
     end
