@@ -2,25 +2,33 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
+  include Cloudinary::CarrierWave
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  uploader = AvatarUploader.new
-
-  # def new
-  #   uploader = AvatarUploader.new
-  #   uploader.store!(my_file)
-  #   uploader.retrieve_from_store!('my_file.png')
+  # def cache_dir
+  #   '/tmp/MuskokaApp-cache'
   # end
+
+  uploader = AvatarUploader.new
+  # uploader.store!
+
+ #  def create
+ #   cloudinary = Cloudinary::Uploader.upload( params[:avatar] )
+ #   @image = AvatarUploader.new
+ #   @image.link = cloudinary["url"]
+ # end
+
+
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -31,14 +39,26 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process scale: [200, 300]
+  process scale: [200, 300]
+  process :convert => 'png'
+  process :tags => ['post_picture']
   #
   # def scale(width, height)
   #   # do something
   # end
 
+  # def public_id
+  #
+  # end
+
   # Create different versions of your uploaded files:
+  version :standard do
+    process :eager => true
+    process :resize_to_fill => [100, 150, :north]
+  end
+
   version :thumb do
+   process :eager => true
    process resize_to_fit: [50, 50]
   end
 
