@@ -1,9 +1,18 @@
 class EntriesController < ApplicationController
 
-  before_action :ensure_logged_in
+  # before_action :ensure_logged_in
 
   def index
     @entries = Entry.all
+
+    respond_to do |format|
+      format.html
+      format.js
+      format.json do
+        render json: @entries
+      end
+    end
+
   end
 
   def new
@@ -25,10 +34,26 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.js
+      format.json do
+        render json: @entry
+      end
+    end
+
   end
 
   def edit
     @entry = Entry.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+      format.json do
+        render json: @entry
+      end
+    end
   end
 
   def update
