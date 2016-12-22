@@ -6,6 +6,8 @@ $(function() {
     const FIRST = URL.substring(0, URL.indexOf("upload/"));
     const LAST = URL.split("upload/")[1];
 
+    var newerUrl = ""
+
     $('.filter-button').on('click', function() {
 
       // get the name of the filter and add e_art: to it
@@ -17,9 +19,19 @@ $(function() {
       // assign it to the image
       $('#entry_image img').attr('src', filtered );
 
-      // check the url
-      var url = $('#entry_image img').attr('src');
-      console.log(url);
+      // assign the newUrl to a variable that updates
+      newUrl = $('#entry_image img').attr('src');
+      console.log(newUrl);
+
+      newerUrl = newUrl.split("dx3z90dgl/")[1];
+      console.log(newerUrl);
+
+    });
+
+
+      $('#entry_image img').on('load',function() {
+        $('input[type=hidden]#hidden-filter-send').val(newerUrl);
+      });
 
       //
       // var url = window.location.pathname
@@ -63,7 +75,7 @@ $(function() {
       //
       // });
 
-    });
+
 
 
 });

@@ -47,6 +47,7 @@ class EntriesController < ApplicationController
 
   def edit
     @entry = Entry.find(params[:id])
+    @entry.avatar.cache!
     respond_to do |format|
       format.html
       format.js
@@ -60,9 +61,9 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params[:id])
 
     if @entry.update_attributes(entry_params)
-      redirect_to product_url(@entry)
+      puts "saved"
     else
-      render :edit
+      puts "failed"
     end
   end
 

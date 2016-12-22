@@ -14,3 +14,11 @@
    <span class="filter-button">eucalyptus</span>
    <span class="filter-button">fes</span>
 </div>
+
+<div>
+
+  <%= form_for @user.entry, :html => { :method => 'patch', :multipart => true } do |f| %>
+    <%= f.hidden_field :avatar, id: "hidden-filter-send", :sign_url => true %>
+    <%= f.submit 'Save Filter', id: "save-filter" %>
+  <% end %>
+<div>
