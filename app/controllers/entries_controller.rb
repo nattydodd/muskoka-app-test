@@ -48,7 +48,7 @@ class EntriesController < ApplicationController
 
   def edit
     @entry = Entry.find(params[:id])
-  
+
     respond_to do |format|
       format.html
       format.js
@@ -61,11 +61,19 @@ class EntriesController < ApplicationController
   def update
     @entry = Entry.find(params[:id])
 
-    if @entry.update_attributes(entry_params)
-      puts "saved"
-    else
-      puts "failed"
-    end
+    @entry.assign_attributes(entry_params)
+      if @entry.avatar_changed?
+        @entry.filter = nil
+      end
+      
+      if @entry.save
+        redirect_to user_path(current_user)
+      else
+        render 'edit'
+      end
+
+
+
   end
 
   def destroy
