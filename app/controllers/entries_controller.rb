@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
 
-  # before_action :ensure_logged_in
+  before_action :ensure_logged_in
 
   def index
     @entries = Entry.all
@@ -17,6 +17,7 @@ class EntriesController < ApplicationController
 
   def new
     @entry = Entry.new(:user_id => params[:user])
+    @user = current_user
   end
 
   def create

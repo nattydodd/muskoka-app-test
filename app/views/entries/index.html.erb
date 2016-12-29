@@ -5,7 +5,11 @@
   <ul>
     <li><%= entry.name %></li>
     <li><%= entry.story %></li>
-    <li><%= image_tag entry.avatar_url %></li>
+    <% if entry.filter %>
+      <li><%= image_tag entry.filter %></li>
+    <% else %>
+      <li><%= image_tag entry.avatar_url %></li>
+    <% end %>  
     <li><%= entry.user_id %></li>
   </ul>
 <% end %>

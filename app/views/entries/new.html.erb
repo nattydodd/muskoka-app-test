@@ -1,4 +1,11 @@
 <h1>Entries#new</h1>
 <p>Find me in app/views/entries/new.html.erb</p>
 
+<% if @user.entry %>
+  <h1> You have already submitted an entry for this contest.<br>
+     View your entry <%= link_to 'here', @user %></h1>
+<% else %>
+
 <%= render 'form' %>
+
+<% end %>
