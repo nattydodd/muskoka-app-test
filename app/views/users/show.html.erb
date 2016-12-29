@@ -11,6 +11,8 @@
     <%= @user.entry.avatar.url %>
     <%= @user.entry.story %>
 
+    <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
+
     <% else %>
     <h1> You have not created your entry yet</h1>
 

@@ -48,7 +48,7 @@ class EntriesController < ApplicationController
 
   def edit
     @entry = Entry.find(params[:id])
-    @entry.avatar.cache!
+  
     respond_to do |format|
       format.html
       format.js
