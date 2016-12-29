@@ -1,9 +1,22 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-<div id="entry_image"><%= image_tag(@user.entry.avatar_url) %></div>
-<%= @user.entry.avatar.url %>
-<%= @user.entry.story %>
+
+  <% if @user.entry %>
+
+    <%= image_tag(@user.entry.filter) %>
+    <div id="entry_image">
+      <%= image_tag(@user.entry.avatar_url) %>
+    </div>
+    <%= @user.entry.avatar.url %>
+    <%= @user.entry.story %>
+
+    <% else %>
+    <h1> You have not created your entry yet</h1>
+
+  <% end %>
+
+
 
 <div class="buttons-container">
    <span class="filter-button">al_dente</span>
@@ -17,8 +30,11 @@
 
 <div>
 
-  <%= form_for @user.entry, :html => { :method => 'patch', :multipart => true } do |f| %>
-    <%= f.hidden_field :avatar, id: "hidden-filter-send", :sign_url => true %>
+<% if @user.entry %>
+  <%= form_for @user.entry, :method => :PUT do |f| %>
+    <%= f.text_field :filter, id: "hidden-filter-send" %>
     <%= f.submit 'Save Filter', id: "save-filter" %>
   <% end %>
+
+<% end %>
 <div>

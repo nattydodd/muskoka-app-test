@@ -76,7 +76,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:name, :story, :user_id, :avatar)
+    params.require(:entry).permit(:name, :story, :user_id, :avatar, :filter)
   end
 
 

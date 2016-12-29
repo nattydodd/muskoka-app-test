@@ -26,12 +26,14 @@ $(function() {
       newerUrl = newUrl.split("dx3z90dgl/")[1];
       console.log(newerUrl);
 
+
+      $('#hidden-filter-send').val(newUrl);
+
+
+
     });
 
 
-      $('#entry_image img').on('load',function() {
-        $('input[type=hidden]#hidden-filter-send').val(newerUrl);
-      });
 
       //
       // var url = window.location.pathname
