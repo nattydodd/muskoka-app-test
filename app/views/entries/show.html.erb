@@ -1,6 +1,13 @@
 <h1>Entries#show</h1>
-<p>Find me in app/views/entries/show.html.erb</p>
 
-<%= image_tag(@entry.avatar_url) %></div>
-<%= @entry.avatar.url %>
+<% if @entry.filter %>
+  <%= image_tag(@entry.filter) %>
+<% else %>
+  <%= image_tag(@entry.avatar_url) %>
+<% end %>
+
 <%= @entry.story %>
+
+<%= form_for [@entry, @vote] do |f| %>
+  <%= f.submit "Vote" %>
+<% end %>

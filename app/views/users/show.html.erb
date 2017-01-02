@@ -1,13 +1,12 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>YOUR PROFILE</h1>
 
-
+<h2>Your entry submission:</h2>
   <% if @user.entry %>
   <!-- if the user has chosen filter already -->
     <% if @user.entry.filter %>
       <%= image_tag(@user.entry.filter) %>
       <%= @user.entry.story %>
-
+  <!-- if no filter has been chosen -->
     <% else %>
       <div id="entry_image">
         <%= image_tag(@user.entry.avatar_url) %>
@@ -32,10 +31,11 @@
           <%= f.text_field :filter, id: "hidden-filter-send" %>
           <%= f.submit 'Save Filter', id: "save-filter" %>
         <% end %>
-
       <% end %>
+      <!-- end of form -->
 
     <% end %>
+    <!-- end of condition of whether filter exists -->
 
     <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
 
@@ -43,6 +43,7 @@
     <h1> You have not created your entry yet</h1>
 
   <% end %>
+  <!-- end of condition of whether entry exists -->
 
 
 

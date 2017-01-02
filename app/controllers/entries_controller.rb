@@ -36,6 +36,10 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
 
+    if current_user
+      @vote = @entry.votes.build
+    end
+
     respond_to do |format|
       format.html
       format.js
@@ -65,7 +69,7 @@ class EntriesController < ApplicationController
       if @entry.avatar_changed?
         @entry.filter = nil
       end
-      
+
       if @entry.save
         redirect_to user_path(current_user)
       else
