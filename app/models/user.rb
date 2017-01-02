@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   has_one :entry
   has_one :vote
-  has_many :user_voters, class_name: "User", through: :votes
+  has_one :entry_vote, class_name: "Entry", through: :vote
 
   validates :name, :password_digest, presence: true
   validates :email, uniqueness: true

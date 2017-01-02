@@ -45,6 +45,12 @@
   <% end %>
   <!-- end of condition of whether entry exists -->
 
+<% if @user.vote %>
+  <h1> You voted for: </h1>
 
+    <%= image_tag(@user.vote.entry.filter) %>
+
+
+<% end %>
 
 <div>
