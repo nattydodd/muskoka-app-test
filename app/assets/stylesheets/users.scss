@@ -2,10 +2,88 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$font-regular: 'Work Sans', sans-serif;
+$primary1: #4a5159;
+$primary2: #d24545;
+$primary3: #c5c2c5;
+$primary4: #008cb2;
+$secondary1: #574942;
+$secondary2: #3f9989;
+$secondary3: #396370;
+$secondary4: #e5e3e3;
+
+
 .top-section {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407510/MainSection_Background_kiehbd.jpg");
-  height: 600px;
+  height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left center;
+}
+
+.your-adventure {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
+  height: 600px;
+  background-size: cover;
+}
+
+.enter-to-win {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  h1 {
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 5rem;
+    margin-top: 0;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.signup-form {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.field input {
+  width: 100%;
+  height: 4rem;
+  font-family: $font-regular;
+  padding-left: 10px;
+  font-size: 2rem;
+}
+
+.actions {
+  margin: auto;
+  display: block;
+  text-align: center;
+
+  input {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: $secondary1;
+    color: $secondary4;
+    font-family: $font-regular;
+    font-size: 2rem;
+    border: none;
+  }
+}
+
+.choose-canada {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.green-board {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
+  margin: 40px 2%;
+  height: 600px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
