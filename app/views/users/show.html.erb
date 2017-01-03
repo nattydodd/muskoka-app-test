@@ -48,7 +48,8 @@
 <% if @user.vote %>
   <h1> You voted for: </h1>
 
-    <%= image_tag(@user.vote.entry.filter) %>
+    <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>
+    <%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
 
 
 <% end %>
