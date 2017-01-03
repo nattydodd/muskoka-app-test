@@ -1,13 +1,31 @@
-<h1>All Entries</h1>
+<div class="container-fluid all-entries">
 
-<% @entries.each do |entry| %>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1 entry-top-text">
+      <h1>CAST YOUR VOTE</h1>
+      <h4>Donec bibendum accumsan fringilla. Sed quam magna, viverra sit amet volutpat blandit, consequat in nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h4>
+      <br>
+      <h4>Have an even better story to share?</h4>
+      <div class="submit-button">
+        <%= link_to "SUBMIT YOUR ENTRY", new_entry_path(current_user) %>
+      </div>
+    </div>
+  </div>
+  <div class="row-wrapper">
 
-  <div><%= entry.name %></div>
-    <% if entry.filter %>
-      <%= link_to image_tag(entry.filter), entry_path(entry) %>
-    <% else %>
-      <%= link_to image_tag(entry.avatar_url), entry_path(entry) %>
+    <% @entries.in_groups_of(4, false).each do |group| %>
+      <div class="row">
+        <% group.each do |entry| %>
+          <div class="col-md-3 all-images">
+              <% if entry.filter %>
+                <%= link_to image_tag(entry.filter), entry_path(entry) %>
+              <% else %>
+                <%= link_to image_tag(entry.avatar_url), entry_path(entry) %>
+              <% end %>
+          </div>
+        <% end %>
+      </div>
+          <%#= entry.votes.count %>
     <% end %>
-  <%= entry.votes.count %>  
-
-<% end %>
+  </div>
+</div>

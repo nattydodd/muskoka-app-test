@@ -1,0 +1,21 @@
+$font-regular: 'Work Sans', sans-serif;
+$primary1: #4a5159;
+$primary2: #d24545;
+$primary3: #c5c2c5;
+$primary4: #008cb2;
+$secondary1: #574942;
+$secondary2: #3f9989;
+$secondary3: #396370;
+$secondary4: #e5e3e3;
+
+
+.about-main {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+}
+
+.about-section-one {
+  padding: 100px;
+  h1 {
+    color: $secondary4;
+  }
+}

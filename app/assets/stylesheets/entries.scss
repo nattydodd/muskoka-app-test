@@ -1,3 +1,72 @@
 // Place all the styles related to the Entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-regular: 'Work Sans', sans-serif;
+$primary1: #4a5159;
+$primary2: #d24545;
+$primary3: #c5c2c5;
+$primary4: #008cb2;
+$secondary1: #574942;
+$secondary2: #3f9989;
+$secondary3: #396370;
+$secondary4: #e5e3e3;
+// Entries index
+
+.all-entries {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+}
+
+.already-submitted {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  h1 {
+    color: $primary3;
+  }
+}
+
+.already-submit-row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.row-wrapper {
+  margin-top: 80px;
+}
+
+.entry-top-text {
+  color: $secondary4;
+  font-family: $font-regular;
+  h1 {
+    font-weight: 700;
+    font-size: 5rem;
+  }
+}
+
+.submit-button {
+  margin-top: 10px;
+  background: $secondary1;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 2rem;
+  a {
+    color: $secondary4;
+    font-family: $font-regular;
+  }
+}
+
+.all-images img {
+  max-width: 500px;
+  // min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  margin: auto;
+}
+
+.all-images {
+  width: 200px;
+  height: 300px !important;
+  overflow: hidden;
+  position: relative;
+  padding: 0 !important;
+}
