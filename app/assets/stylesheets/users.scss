@@ -21,6 +21,14 @@ $secondary4: #e5e3e3;
   background-position: left center;
 }
 
+.logo {
+  img {
+    max-width: 600px;
+    position: absolute;
+    top: 100px;
+  }
+}
+
 .your-adventure {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
   height: 600px;
