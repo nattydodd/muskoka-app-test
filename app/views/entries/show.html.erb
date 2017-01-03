@@ -12,8 +12,10 @@
 <% if current_user.vote %>
   <% if current_user.vote.entry_id == @entry.id %>
     <h1>Voted</h1>
-  <% end %>  
+  <% end %>
   <h3>You have already cast your vote. Retract your previous vote by visiting your profile page </h3>
+<% elsif current_user.entry == @entry %>
+  <h2>This is your submission </h2>
 <% else %>
   <%= form_for [@entry, @vote] do |f| %>
     <%= f.submit "Vote" %>
