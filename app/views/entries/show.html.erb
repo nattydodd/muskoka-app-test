@@ -1,12 +1,47 @@
-<div class="container-fluid">
+<div class="container-fluid entry-show-main">
+
+  <div class="this-is">
+    <div class="row this-is-row">
+      <div class="col-md-2 this-is-text">
+        <h1>This is<br>
+           <%= @entry.name %>'s</h1>
+      </div>
+      <div class="col-md-3">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483475882/RTO12Logo_01-03_qybe52.svg") %>
+      </div>
+    </div>
+  </div>
+
   <% if @entry.filter %>
-    <%= image_tag(@entry.filter) %>
+
+  <style media="screen">
+    .entry-show-main { background-image: url(<%= @entry.filter %>); }
+  </style>
+
   <% else %>
-    <%= image_tag(@entry.avatar_url) %>
+
+  <style media="screen">
+    .entry-show-main { background-image: url(<%= @entry.avatar_url %>); }
+  </style>
+
   <% end %>
 
-  <%= @entry.story %>
+</div>
 
+<div class="container-fluid entry-show-main-bottom">
+  <div class="row entry-show-bottom">
+    <div class="col-md-5 col-md-offset-1 entry-image-focus">
+      <% if @entry.filter %>
+        <%= image_tag(@entry.filter) %>
+      <% else %>
+        <%= image_tag(@entry.avatar_url) %>
+      <% end %>
+    </div>
+    <div class="col-md-5 entry-story">
+      <h1>Story Title</h1>
+      <%= @entry.story %>
+    </div>
+  </div>
 
 
   <% if current_user.vote %>

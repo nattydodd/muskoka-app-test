@@ -70,3 +70,47 @@ $secondary4: #e5e3e3;
   position: relative;
   padding: 0 !important;
 }
+
+// Entry Show
+
+.entry-show-main {
+  height: 600px;
+  background-repeat: none;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.this-is img {
+  max-width: 300px;
+}
+
+.this-is-row {
+  margin-top: 100px;
+}
+
+.this-is-text h1 {
+  font-size: 6rem;
+}
+
+.entry-image-focus img {
+  max-width: 100%;
+}
+
+.entry-show-bottom {
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+.entry-show-main-bottom {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  background-size: cover;
+  background-repeat: none;
+}
+
+.entry-story {
+  background-color: $secondary4;
+  padding: 20px;
+  margin-left: 2% !important;
+  font-family: $font-regular;
+}
