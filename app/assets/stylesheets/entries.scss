@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $font-regular: 'Work Sans', sans-serif;
+$font-this-is: 'Passion One', cursive;
 $primary1: #4a5159;
 $primary2: #d24545;
 $primary3: #c5c2c5;
@@ -90,7 +91,22 @@ $secondary4: #e5e3e3;
 }
 
 .this-is-text h1 {
-  font-size: 6rem;
+  font-size: 9rem;
+  font-family: $font-this-is;
+  color: $secondary4;
+  text-transform: uppercase;
+}
+
+.left-bracket {
+  margin-top: -60px;
+}
+
+.right-bracket {
+  margin-top: 180px;
+}
+
+.maple-leaf {
+  padding: 0 !important;
 }
 
 .entry-image-focus img {

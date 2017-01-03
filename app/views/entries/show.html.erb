@@ -1,13 +1,19 @@
 <div class="container-fluid entry-show-main">
 
-  <div class="this-is">
+  <div class="col-md-8 col-md-offset-2 this-is">
     <div class="row this-is-row">
-      <div class="col-md-2 this-is-text">
-        <h1>This is<br>
-           <%= @entry.name %>'s</h1>
+      <div class="col-md-2 left-bracket">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-05_vx1mwe.svg") %>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4 this-is-text">
+        <h1>This is<br>
+           <%= @entry.name.partition(" ").first %>'s</h1>
+      </div>
+      <div class="col-md-4 maple-leaf">
         <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483475882/RTO12Logo_01-03_qybe52.svg") %>
+      </div>
+      <div class="col-md-2 right-bracket">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-08_inh4io.svg") %>
       </div>
     </div>
   </div>
