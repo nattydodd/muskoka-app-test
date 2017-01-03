@@ -1,4 +1,12 @@
 $font-regular: 'Work Sans', sans-serif;
+$primary1: #4a5159;
+$primary2: #d24545;
+$primary3: #c5c2c5;
+$primary4: #008cb2;
+$secondary1: #574942;
+$secondary2: #3f9989;
+$secondary3: #396370;
+$secondary4: #e5e3e3;
 
 .navbar-right {
   margin: 20px;
@@ -21,4 +29,34 @@ $font-regular: 'Work Sans', sans-serif;
 .nav-pills>li.active>a {
   color: grey !important;
   background-color: transparent !important;
+}
+
+.footer {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
+  height: 500px;
+  h1 {
+    margin-top: 0;
+    padding: 80px 0 40px;
+    color: $secondary4;
+    font-family: $font-regular;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+  }
+  h4 {
+    color: $secondary4;
+    letter-spacing: 0.15rem;
+    font-weight: 300;
+  }
+  h3 {
+    color: $secondary4;
+    border: 2px solid $secondary4;
+    padding: 5px 10px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.footer-input {
+  padding: 30px 0;
 }

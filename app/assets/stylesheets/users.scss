@@ -87,3 +87,23 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+.more-posts {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.more-posts-button {
+  text-align: center;
+  padding: 70px;
+  a {
+    background-color: $secondary2;
+    color: $secondary4;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    font-family: $font-regular;
+    font-size: 2rem;
+  }
+}

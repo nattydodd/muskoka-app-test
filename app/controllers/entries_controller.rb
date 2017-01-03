@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
 
-  before_action :ensure_logged_in
+  before_action :ensure_logged_in, :except => [:index]
 
   def index
     @entries = Entry.all
