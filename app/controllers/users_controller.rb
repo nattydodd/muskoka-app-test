@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def home
     @user = User.new
+    @entries = Entry.all
   end
 
   def new

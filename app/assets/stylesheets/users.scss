@@ -29,6 +29,31 @@ $secondary4: #e5e3e3;
   }
 }
 
+.brackets {
+  margin-top: 40px;
+  img {
+    max-width: 800px;
+  }
+}
+
+.bracket-text {
+  position: absolute;
+  top: 15%;
+  left: 16%;
+  h1 {
+    color: white;
+    font-size: 4.5rem;
+    letter-spacing: 0.2rem;
+    font-family: $font-regular;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  h4 {
+    color: white;
+    font-family: $font-regular;
+  }
+}
+
 .your-adventure {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
   height: 600px;
@@ -42,7 +67,7 @@ $secondary4: #e5e3e3;
     font-weight: 700;
     font-size: 5rem;
     margin-top: 0;
-    padding: 50px;
+    padding: 90px 0px 30px;
     text-align: center;
     color: white;
     letter-spacing: 0.3rem;
@@ -53,7 +78,7 @@ $secondary4: #e5e3e3;
   display: block;
   margin: auto;
   width: 50%;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 .field input {
@@ -87,6 +112,25 @@ $secondary4: #e5e3e3;
   background-position: left center;
 }
 
+.board-text {
+  position: absolute;
+  margin-top: 200px;
+  h1 {
+    text-align: center;
+    color: $primary2;
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 6rem;
+  }
+  h2 {
+    text-align: center;
+    color: $secondary4;
+    font-family: $font-regular;
+    font-weight: 700;
+    font-size: 5rem;
+  }
+}
+
 .green-board {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
   margin: 40px 2%;
@@ -95,6 +139,15 @@ $secondary4: #e5e3e3;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+.entries-last-six img {
+  width: 100%;
+}
+
+.image-block {
+  padding: 0 !important;
+}
+
 
 .more-posts {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");

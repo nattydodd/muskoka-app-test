@@ -17,6 +17,14 @@
   </section>
 
   <section class="your-adventure">
+    <div class="brackets col-md-7 col-md-offset-1">
+      <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483453823/Section2_Brackets-01_x2wsgv.png") %>
+      <div class="bracket-text">
+        <h1>YOUR CANADA.<br>
+            YOUR ADVENTURE.</h1>
+        <h4>Mauris fermentum dui eu luctus tempus. Vivamus viverra tincidunt turpis a tristique. Quisque fringilla efficitur lectus, sit amet rutrum risus tincidunt eget. Sed eu turpis malesuada, placerat turpis eget, pellentesque elit. Phasellus vestibulum, enim fermentum pretium ullamcorper, neque erat condimentum tellus, sed rutrum dui erat at diam.</h4>
+      </div>
+    </div>
   </section>
 
   <section class="enter-to-win">
@@ -29,11 +37,33 @@
   <section class="choose-canada">
     <div class="container-fluid">
       <div class="green-board">
+        <div class="col-md-8 col-md-offset-2 board-text">
+          <h2>CHOOSE YOUR CANADA</h2>
+          <h1>CAST YOUR VOTE</h1>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="entries-last-six">
+    <div class="row flex-md-top">
+    <% @entries.last(2).each do |entry| %>
+      <div class="col-md-6 image-block">
+        <%= image_tag(entry.filter) %>
+      </div>
+    <% end %>
+    <div class="row flex-md-middle">
+    <% @entries.offset(2).last(2).each do |entry| %>
+      <div class="col-md-6 image-block">
+        <%= image_tag(entry.filter) %>
+      </div>
+    <% end %>
+    <div class="row flex-md-bottom">
+    <% @entries.offset(4).last(2).each do |entry| %>
+      <div class="col-md-6 image-block">
+        <%= image_tag(entry.filter) %>
+      </div>
+    <% end %>
   </section>
 
   <section class="more-posts">
