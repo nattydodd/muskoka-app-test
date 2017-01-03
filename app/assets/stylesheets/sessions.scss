@@ -1,3 +1,29 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$font-regular: 'Work Sans', sans-serif;
+$primary1: #4a5159;
+$primary2: #d24545;
+$primary3: #c5c2c5;
+$primary4: #008cb2;
+$secondary1: #574942;
+$secondary2: #3f9989;
+$secondary3: #396370;
+$secondary4: #e5e3e3;
+
+
+.login {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+}
+
+.log-in-form {
+  margin-bottom: 80px;
+  margin-top: 50px;
+  h1 {
+    color: $secondary4;
+  }
+}
+
+.password-field {
+  margin-top: 10px;
+}
