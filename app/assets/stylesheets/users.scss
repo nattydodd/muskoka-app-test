@@ -210,3 +210,25 @@ $secondary4: #e5e3e3;
   background-repeat: none;
   padding-bottom:40px;
 }
+
+.test-your-knowledge {
+  margin-top: 17%;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  font-family: $font-regular;
+  h1 {
+    color: $primary2;
+    font-weight: 700;
+  }
+  h2 {
+    color: $secondary4;
+  }
+  button {
+    background: $primary2;
+    border: none;
+    color: $secondary4;
+    padding: 5px 10px;
+    font-size: 2rem;
+  }
+}
