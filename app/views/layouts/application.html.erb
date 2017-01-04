@@ -13,6 +13,7 @@
   </head>
 
   <body>
+
       <ul class="nav nav-pills navbar-right">
         <li role="presentation">
           <% if current_user %>
@@ -32,12 +33,13 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
             <%= current_user.name %><span class="caret"></span>
           </a>
-        <ul class="dropdown-menu">
-          <li role="presentation"><%= link_to 'Profile', user_path(current_user) %></li>
-          <li role="presentation"><%= link_to 'Logout', session_path("current"), :method => :delete %></a></li>
-        </ul>
+          <ul class="dropdown-menu">
+            <li role="presentation"><%= link_to 'Profile', user_path(current_user) %></li>
+            <li role="presentation"><%= link_to 'Logout', session_path("current"), :method => :delete %></li>
+          </ul>
+        </li>
         <% else %>
-        <li role="presentation"><%= link_to 'Login', new_session_path %>
+        <li role="presentation"><%= link_to 'Login', new_session_path %></li>
         <!-- Will lead to Login Page/ render partial for signup -->
         <% end %>
       </ul>
@@ -47,6 +49,7 @@
 
     <div class="footer">
       <div class="container">
+        <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h1>Tourism Product Info Tease</h1>
           <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique, sem sed convallis finibus, nunc neque dictum metus, sed interdum felis ante quis urna. Nulla ut arcu nibh. </h4>
@@ -56,6 +59,7 @@
           <div class="col-md-6 col-md-offset-3">
             <h3>Send Me Tourist Info.</h3>
           </div>
+        </div>
         </div>
       </div>
     </div>
