@@ -28,7 +28,7 @@
   </section>
 
   <section class="enter-to-win">
-    <h1>ENTER TO WIN</h1>
+    <h1 id="enter-now">ENTER TO WIN</h1>
     <div class="signup-form">
       <%= render 'form' %>
     </div>
@@ -45,25 +45,28 @@
     </div>
   </section>
 
-  <section class="entries-last-six">
+  <section class="container-fluid entries-last-six">
     <div class="row flex-md-top">
     <% @entries.last(2).each do |entry| %>
       <div class="col-md-6 image-block">
         <%= image_tag(entry.filter) %>
       </div>
     <% end %>
+    </div>
     <div class="row flex-md-middle">
     <% @entries.offset(2).last(2).each do |entry| %>
       <div class="col-md-6 image-block">
         <%= image_tag(entry.filter) %>
       </div>
     <% end %>
+    </div>
     <div class="row flex-md-bottom">
     <% @entries.offset(4).last(2).each do |entry| %>
       <div class="col-md-6 image-block">
         <%= image_tag(entry.filter) %>
       </div>
     <% end %>
+    </div>
   </section>
 
   <section class="more-posts">

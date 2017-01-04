@@ -234,3 +234,33 @@ $secondary4: #e5e3e3;
     font-size: 2rem;
   }
 }
+
+.create-your-entry {
+  padding: 50px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+
+}
+
+.filter-background {
+  background-color: $primary3;
+}
+
+#entry_image img {
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.filter-button {
+  margin: 10px;
+}
+
+.story-column {
+  margin-top: 40px;
+}
+
+#save-filter {
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-bottom: 40px;
+}

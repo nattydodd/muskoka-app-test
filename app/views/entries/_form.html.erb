@@ -12,31 +12,24 @@
   <% end %>
 
 
-  <% if @entry.avatar %>
-    <p>Original file: <%= image_tag(@entry.avatar_url) %></p>
 
-    <p>Replace file?</p>
+    <p>Current file: <%= image_tag(@entry.avatar_url) %></p>
+
+
     <div class="field">
-      <%= f.label :avatar %>
+      <%= f.label :avatar, "Image File" %>
       <%= f.file_field :avatar %>
-      <%= f.hidden_field :avatar_cache %>
-    </div> <br>
+    </div>
 
-  <% else %>
-    <div class="field">
-      <%= f.label :avatar %>
-      <%= f.file_field :avatar %>
-    </div> <br>
 
-  <% end %>
 
 
   <div class="field">
     <%= f.label :story %> <br>
-    <%= f.text_field :story %>
+    <%= f.text_area :story, size: "100x10" %>
   </div> <br>
 
-  <div class="actions">
+  <div class="actions action-left">
     <%= f.submit 'Submit' %>
   </div>
 

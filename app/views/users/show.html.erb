@@ -60,6 +60,20 @@
   </div>
 </div>
 
+<div class="container-fluid share-section">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 take-the-quiz">
+      <div class="test-your-knowledge">
+        <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
+        <button>TAKE THE QUIZ</button>
+        <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
+        <button>SHARE CHALLENGE</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
   <% else %>
 
 <!-- if no filter exists -->
@@ -68,31 +82,38 @@
   </style>
 
 </div>
-<!-- end of main container div -->
 
-<div class="container-fluid">
 
+    <div class="col-md-6 col-md-offset-1">
+      <div id="entry_image">
+        <%= image_tag(@user.entry.avatar_url) %>
+      </div>
       <div class="buttons-container">
-         <span class="filter-button">al_dente</span>
-         <span class="filter-button">athena</span>
-         <span class="filter-button">audrey</span>
-         <span class="filter-button">aurora</span>
-         <span class="filter-button">daguerre</span>
-         <span class="filter-button">eucalyptus</span>
-         <span class="filter-button">fes</span>
+         <button class="filter-button">al_dente</button>
+         <button class="filter-button">athena</button>
+         <button class="filter-button">audrey</button>
+         <button class="filter-button">aurora</button>
+         <button class="filter-button">daguerre</button>
+         <button class="filter-button">eucalyptus</button>
+         <button class="filter-button">fes</button>
       </div>
 
 
       <% if @user.entry %>
         <%= form_for @user.entry, :method => :PUT do |f| %>
-          <%= f.text_field :filter, id: "hidden-filter-send" %>
+          <%= f.hidden_field :filter, id: "hidden-filter-send" %>
           <%= f.submit 'Save Filter', id: "save-filter" %>
         <% end %>
       <% end %>
       <!-- end of form -->
+    </div>
+
+<!-- end of main container div -->
+
+<div class="container-fluid filter-background">
 
       <div class="row">
-        <div class="container-fluid">
+        <div class="col-md-5 story-column">
           <%= @user.entry.story %>
           <div class="submit-button">
             <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
@@ -108,13 +129,33 @@
           </div>
         </div>
       </div>
+    </div>  
+
+      <div class="container-fluid share-section">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 take-the-quiz">
+            <div class="test-your-knowledge">
+              <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
+              <button>TAKE THE QUIZ</button>
+              <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
+              <button>SHARE CHALLENGE</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
     <% end %>
     <!-- end of if statement whether filter exists -->
 
 
     <% else %>
-    <h1> You have not created your entry yet</h1>
+
+    <div class="container-fluid create-your-entry">
+      <div class="col-md-8">
+        <h1> You have not submitted an entry yet</h1>
+      </div>
+    </div>
 
   <% end %>
 
@@ -130,18 +171,4 @@
       <%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
 
   <% end %>
-  </div>
-
-  <div class="container-fluid share-section">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 take-the-quiz">
-        <div class="test-your-knowledge">
-          <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
-          <button>TAKE THE QUIZ</button>
-          <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
-          <button>SHARE CHALLENGE</button>
-        </div>
-      </div>
-
-    </div>
   </div>

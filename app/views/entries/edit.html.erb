@@ -2,3 +2,5 @@
 <p>Find me in app/views/entries/edit.html.erb</p>
 
 <%= render 'form' %>
+
+<%= link_to 'Delete Entry', "/entries/#{@user.entry.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
