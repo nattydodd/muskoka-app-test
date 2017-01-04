@@ -121,8 +121,9 @@
 </div>
   <!-- end of condition of whether entry exists -->
 
-<div class="container-fluid">
+<div class="container-fluid thanks-for-voting">
   <% if @user.vote %>
+    <h1>Thank you for voting!</h1>
     <h1> You voted for: </h1>
 
       <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>

@@ -11,6 +11,9 @@ $secondary4: #e5e3e3;
 .navbar-right {
   margin: 20px;
   padding-right: 30px;
+  z-index: 2;
+  position: absolute;
+  right: 0;
 }
 
 .nav-pills>li>a {
