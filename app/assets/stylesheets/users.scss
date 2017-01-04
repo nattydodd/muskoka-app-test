@@ -167,3 +167,46 @@ $secondary4: #e5e3e3;
     font-size: 2rem;
   }
 }
+
+// User show
+
+.your-entry {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 0;
+  color: $secondary4;
+}
+
+.fa {
+  font-size: 3rem !important;
+  margin: 10px;
+}
+
+.take-the-quiz {
+  height: 500px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
+  background-repeat: none;
+  background-size: cover;
+}
+
+.share-the-quiz {
+
+}
+
+.share-section {
+  height: 500px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+
+.user-story {
+  margin-left: 2% !important;
+}
+
+.user-show-main-bottom {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  background-size: cover;
+  background-repeat: none;
+  padding-bottom:40px;
+}

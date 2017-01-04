@@ -1,17 +1,76 @@
-<h1>YOUR PROFILE</h1>
+<% if @user.entry %>
+<!-- if an entry exists -->
 
-<h2>Your entry submission:</h2>
-  <% if @user.entry %>
-  <!-- if the user has chosen filter already -->
-    <% if @user.entry.filter %>
-      <%= image_tag(@user.entry.filter) %>
-      <%= @user.entry.story %>
-  <!-- if no filter has been chosen -->
-    <% else %>
-      <div id="entry_image">
-        <%= image_tag(@user.entry.avatar_url) %>
+<div class="container-fluid entry-show-main">
+
+  <div class="col-md-8 col-md-offset-2 this-is">
+    <div class="row this-is-row">
+      <div class="col-md-2 left-bracket">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-05_vx1mwe.svg") %>
       </div>
-      <%= @user.entry.story %>
+      <div class="col-md-4 this-is-text">
+        <h1>This is<br>
+            Your</h1>
+      </div>
+      <div class="col-md-4 maple-leaf">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483475882/RTO12Logo_01-03_qybe52.svg") %>
+      </div>
+      <div class="col-md-2 right-bracket">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-08_inh4io.svg") %>
+      </div>
+    </div>
+  </div>
+<!-- if the entry has a filter already -->
+  <% if @user.entry.filter %>
+
+  <style media="screen">
+    .entry-show-main { background-image: url(<%= @user.entry.filter %>); }
+  </style>
+
+</div>
+
+<div class="container-fluid user-show-main-bottom">
+  <div class="row your-entry">
+  </div>
+  <div class="row user-show-bottom">
+    <div class="col-md-5 col-md-offset-1 entry-image-focus">
+      <% if @user.entry.filter %>
+        <%= image_tag(@user.entry.filter) %>
+      <% else %>
+        <%= image_tag(@user.entry.avatar_url) %>
+      <% end %>
+    </div>
+    <div class="col-md-5 user-story">
+      <%= @user.entry.story %><br>
+      <div class="submit-button">
+        <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
+      </div>
+      <div class="vote-count">
+        <h1>Total Votes: <%= @user.entry.votes.count %></h1>
+        <div class="row">
+          <div class="col-md-4 sharing">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-8"><h4>Share your entry and receive 10 extra votes!</h4></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <% else %>
+
+<!-- if no filter exists -->
+  <style media="screen">
+    .entry-show-main { background-image: url(<%= @user.entry.avatar_url %>); }
+  </style>
+
+</div>
+<!-- end of main container div -->
+
+<div class="container-fluid">
 
       <div class="buttons-container">
          <span class="filter-button">al_dente</span>
@@ -23,7 +82,6 @@
          <span class="filter-button">fes</span>
       </div>
 
-      <div>
 
       <% if @user.entry %>
         <%= form_for @user.entry, :method => :PUT do |f| %>
@@ -33,24 +91,50 @@
       <% end %>
       <!-- end of form -->
 
-    <% end %>
-    <!-- end of condition of whether filter exists -->
+      <div class="row">
+        <div class="container-fluid">
+          <%= @user.entry.story %>
+          <div class="submit-button">
+            <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
+          </div>
+          <div class="vote-count">
+            <h1>Total Votes: <%= @user.entry.votes.count %></h1>
+            <div class="sharing">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <h2>Share your entry and receive 10 extra votes!</h2>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
+    <% end %>
+    <!-- end of if statement whether filter exists -->
+
 
     <% else %>
     <h1> You have not created your entry yet</h1>
 
   <% end %>
+
+</div>
   <!-- end of condition of whether entry exists -->
 
-<% if @user.vote %>
-  <h1> You voted for: </h1>
+<div class="container-fluid">
+  <% if @user.vote %>
+    <h1> You voted for: </h1>
 
-    <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>
-    <%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
+      <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>
+      <%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
 
+  <% end %>
+  </div>
 
-<% end %>
+  <div class="container-fluid share-section">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 take-the-quiz">
+      </div>
 
-<div>
+    </div>
+  </div>
