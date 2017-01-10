@@ -12,24 +12,26 @@
   <% end %>
 
 
+    <% if @entry.avatar_url %>
+      <p>Current file: <%= image_tag(@entry.avatar_url) %></p>
+    <% end %>
 
-    <p>Current file: <%= image_tag(@entry.avatar_url) %></p>
+    <div class="row">
+      <div class="field col-md-4 fake-button">
+        <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"> <br/>
+        <span class="carrierwave-wave-field">
+          <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
+          <h1>Select File</h1>
+          <%= f.file_field :avatar, id: "avatar-upload" %>
+        </span>
+      </div>
 
+      <div class="field col-md-4 col-md-offset-1">
+        <%= f.text_area :story, size: "50x15", placeholder: "Tell us the story!", id: "story-box" %>
+      </div> <br>
+  </div>
 
-    <div class="field">
-      <%= f.label :avatar, "Image File" %>
-      <%= f.file_field :avatar %>
-    </div>
-
-
-
-
-  <div class="field">
-    <%= f.label :story %> <br>
-    <%= f.text_area :story, size: "100x10" %>
-  </div> <br>
-
-  <div class="actions action-left">
+  <div class="actions submit-right col-md-2 col-md-offset-9">
     <%= f.submit 'Submit' %>
   </div>
 
