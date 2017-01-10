@@ -36,8 +36,9 @@ $secondary4: #e5e3e3;
 }
 
 .footer {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
-  height: 500px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   h1 {
     margin-top: 0;
     padding: 80px 0 40px;
@@ -73,4 +74,9 @@ $secondary4: #e5e3e3;
   z-index: 5;
   background: white;
   padding-bottom: 5px;
+}
+
+.explorer-bottom img {
+  max-width: 100px;
+  margin: 30px;
 }
