@@ -2,8 +2,12 @@
 
   <section class="top-section">
     <div class="logo col-md-6 col-md-offset-3">
-      <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg") %>
-      <!-- <h1 class="headline">Share your best Canadian memory for a chance to win [prize]!</h1> -->
+      <div class="hero-images">
+        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg") %>
+      </div>
+    </div>
+    <div class="col-md-2 col-md-offset-5">
+      <button class="submit-button page-scroll" id="hero-button" href="#enter-now" >ENTER NOW</button>
     </div>
   </section>
 
@@ -93,6 +97,18 @@
     <% @entries.last(2).each do |entry| %>
       <div class="col-md-6 image-block">
         <%= image_tag(entry.filter) %>
+        <div class="hover-content">
+          <span class="hover-user"><%= entry.user.name %></span><br>
+          <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span><br>
+          <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
+          <span class="hover-share">SHARE</span><br>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+        <div class="hover-content-right">
+        </div>
       </div>
     <% end %>
     </div>
@@ -100,6 +116,16 @@
     <% @entries.offset(2).last(2).each do |entry| %>
       <div class="col-md-6 image-block">
         <%= image_tag(entry.filter) %>
+        <div class="hover-content">
+          <span class="hover-user"><%= entry.user.name %></span><br>
+          <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span><br>
+          <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
+          <span class="hover-share">SHARE</span><br>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
       </div>
     <% end %>
     </div>
@@ -107,6 +133,16 @@
     <% @entries.offset(4).last(2).each do |entry| %>
       <div class="col-md-6 image-block">
         <%= image_tag(entry.filter) %>
+        <div class="hover-content">
+          <span class="hover-user"><%= entry.user.name %></span><br>
+          <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span><br>
+          <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
+          <span class="hover-share">SHARE</span><br>
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
       </div>
     <% end %>
     </div>

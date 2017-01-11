@@ -20,6 +20,19 @@ $secondary4: #e5e3e3;
   background-position: left center;
 }
 
+#hero-button {
+  border: none;
+  color: $secondary4;
+  text-align: center;
+  max-width: 600px;
+  position: absolute;
+  margin-top: 521px;
+}
+
+.hero-images {
+  overflow: hidden;
+}
+
 .logo {
   img {
     max-width: 600px;
@@ -178,6 +191,66 @@ $secondary4: #e5e3e3;
   overflow: hidden;
   position: relative;
   padding: 0 !important;
+  &:hover {
+    .hover-content {
+      display: block;
+    }
+  }
+}
+
+.image-block:before {
+  background-color: rgba(0, 0, 0, 0.0);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.hover-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  color: white;
+  font-family: $font-regular;
+}
+
+.hover-user {
+  font-size: 4rem;
+  font-family: $font-regular;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.hover-title h3 {
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+.hover-share {
+  margin: 10px;
+}
+
+.hover-more {
+  padding-bottom: 40px;
+  display: inline-block;
+  a {
+    color: white;
+  }
+}
+
+.hover-content-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.image-block:hover::before {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 
