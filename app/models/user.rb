@@ -8,5 +8,6 @@ class User < ApplicationRecord
 
   validates :name, :password_digest, presence: true
   validates :email, uniqueness: true
+  validates :terms_of_service, acceptance: true
 
 end

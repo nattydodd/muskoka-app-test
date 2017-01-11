@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
      redirect_to new_entry_url, notice: "Logged in"
    else flash.now[:alert] = "Invalid email or password"
    # If user's login doesn't work, send them back to the login form.
-    #  render "new"
+     render "new"
    end
   end
 

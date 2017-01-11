@@ -1,5 +1,10 @@
 $(function() {
 
+  if (window.location.href.indexOf("entries") > -1) {
+    $(".navbar-right").addClass("dark-nav");
+  }
+
+
 
   // showing image preview
         function readURL(input) {

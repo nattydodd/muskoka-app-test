@@ -8,9 +8,17 @@ $secondary2: #3f9989;
 $secondary3: #396370;
 $secondary4: #e5e3e3;
 
+.text-link {
+  color: $secondary1;
+}
+
+.t_c {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .navbar-right {
   margin: 20px;
-  padding-right: 80px;
   z-index: 2;
   position: absolute;
   right: 0;
@@ -33,6 +41,11 @@ $secondary4: #e5e3e3;
 .nav-pills>li.active>a {
   color: grey !important;
   background-color: transparent !important;
+}
+
+.dark-nav {
+  // background-color: rgba(76, 63, 63, 0.31);
+  // margin-top: 0;
 }
 
 .footer {
@@ -70,7 +83,7 @@ $secondary4: #e5e3e3;
   max-width: 100px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 5;
   background: white;
   padding-bottom: 5px;

@@ -1,7 +1,7 @@
 <div class="container-fluid all-entries">
 
   <div class="row">
-    <div class="col-md-8 col-md-offset-1 entry-top-text">
+    <div class="col-md-7 col-md-offset-1 entry-top-text">
       <h1>CAST YOUR VOTE</h1>
       <h4>Donec bibendum accumsan fringilla. Sed quam magna, viverra sit amet volutpat blandit, consequat in nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h4>
       <br>
@@ -9,6 +9,9 @@
       <div class="submit-button">
         <%= link_to "SUBMIT YOUR ENTRY", new_entry_path(current_user) %>
       </div>
+    </div>
+    <div class="col-md-3">
+      <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
     </div>
   </div>
   <div class="row-wrapper">
@@ -25,7 +28,7 @@
           </div>
         <% end %>
       </div>
-  
+
     <% end %>
   </div>
 </div>
