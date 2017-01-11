@@ -26,9 +26,10 @@ $(function() {
 
 
 
-
+if (window.location.href.indexOf("users") > -1) {
     // get the url of the entry image
     const URL = $('#entry_image img').attr('src');
+    console.log(URL);
     // split the image url
     const FIRST = URL.substring(0, URL.indexOf("upload/"));
     const LAST = URL.split("upload/")[1];
@@ -59,5 +60,6 @@ $(function() {
 
     });
 
-
+  }
+  
 });

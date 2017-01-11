@@ -121,6 +121,8 @@ $secondary4: #e5e3e3;
 
 .entry-image-focus img {
   max-width: 100%;
+  border: 5px solid $secondary4;
+  border-radius: 5px;
 }
 
 .entry-show-bottom {

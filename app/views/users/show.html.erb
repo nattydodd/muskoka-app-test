@@ -66,13 +66,22 @@
       <div class="test-your-knowledge">
         <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
         <button>TAKE THE QUIZ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid challenge-section">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="test-your-knowledge">
         <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
         <button>SHARE CHALLENGE</button>
       </div>
     </div>
-
   </div>
 </div>
+
 
   <% else %>
 
@@ -161,8 +170,9 @@
     <% else %>
 
     <div class="container-fluid create-your-entry">
-      <div class="col-md-8">
-        <h1> You have not submitted an entry yet</h1>
+      <div class="col-md-8 col-md-offset-1 user-share-memory">
+        <h1>Share your best Canadian memory for a chance to win [prize]!</h1>
+        <button class="submit-button"><a href="/entries/new">ENTER NOW</a></button>
       </div>
     </div>
 
@@ -172,6 +182,7 @@
   <!-- end of condition of whether entry exists -->
 
 <% if @user.vote %>
+
   <div class="container-fluid thanks-for-voting">
     <div class="row">
       <div class="col-md-5 col-md-offset-1">
@@ -185,5 +196,19 @@
       </div>
     </div>
   </div>
+
+  <% else %>
+
+  <div class="container-fluid thanks-for-voting">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <h1 class="thankyou ty-top">Don't forget to cast your vote!</h1>
+        <button class="submit-button"><a href="/entries">VOTE NOW</a></button>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>
+  </div>
+
 
 <% end %>

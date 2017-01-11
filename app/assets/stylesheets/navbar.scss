@@ -12,6 +12,12 @@ $secondary4: #e5e3e3;
   color: $secondary1;
 }
 
+a:focus, a:hover {
+  color: $primary2 !important;
+  text-decoration: none !important;
+}
+
+
 .t_c {
   text-align: center;
   margin-bottom: 20px;

@@ -16,6 +16,8 @@ class VotesController < ApplicationController
   def destroy
     @vote = Vote.find(params[:id])
     @vote.destroy
+    @entries = Entry.all
+    redirect_to entries_path
   end
 
   private
