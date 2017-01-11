@@ -1,18 +1,9 @@
 
-<% if current_user %>
-
-<div class="container">
-
-  <h1> Welcome back, <%= current_user.name %> ! </h1>
-
-</div>
-
-<% else %>
-
 
   <section class="top-section">
     <div class="logo col-md-6 col-md-offset-3">
       <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg") %>
+      <!-- <h1 class="headline">Share your best Canadian memory for a chance to win [prize]!</h1> -->
     </div>
   </section>
 
@@ -77,6 +68,7 @@
         </div>
         <div class="col-md-5">
           <h1 id="enter-now">ENTER TO WIN</h1>
+          <p class="below">Sign up below to get started!</p>
           <div class="signup-form">
             <%= render 'form' %>
           </div>
@@ -142,5 +134,3 @@
       </div>
     </div>
   </section>
-
-<% end %>

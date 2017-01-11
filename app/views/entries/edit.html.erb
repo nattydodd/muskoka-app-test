@@ -1,6 +1,20 @@
-<h1>Entries#edit</h1>
-<p>Find me in app/views/entries/edit.html.erb</p>
 
-<%= render 'form' %>
+<div class="container-fluid edit-photo">
+  <div class="row">
+    <%= render 'form' %>
+  </div>
 
-<%= link_to 'Delete Entry', "/entries/#{@user.entry.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
+  <!-- <div class="row">
+    <div class="col-md-6 col-md-offset-2 edit-photo">
+      <%# if @entry.avatar_url %>
+        <p>Current file: <%#= image_tag(@entry.avatar_url) %></p>
+      <%# end %>
+    </div>
+  </div>
+</div> -->
+
+<div class="col-md-5 col-md-offset-9 delete-entry-container">
+  <%= link_to 'Delete Entry', "/entries/#{@user.entry.id}", method: :delete, data: {confirm: 'Are you sure?'}, class: "delete-entry" %>
+</div>
+
+</div>

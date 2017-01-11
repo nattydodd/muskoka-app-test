@@ -94,3 +94,36 @@ textarea {
 .fake-button {
   text-align: center;
 }
+
+.edit-photo img {
+  max-width: 400px;
+}
+
+.edit-photo {
+  padding-top: 100px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  padding-bottom: 100px;
+  padding-left: 50px !important;
+}
+
+.delete-entry {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: $primary2;
+  color: $secondary4;
+  font-family: $font-regular;
+  font-size: 2rem;
+  border: none;
+}
+
+.delete-entry-container {
+  margin-top: 40px;
+}
+
+.headline {
+  margin-top: 500px;
+  color: $secondary4;
+  font-family: $font-regular;
+  font-weight: 400;
+  text-align: center;
+}

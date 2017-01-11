@@ -12,16 +12,13 @@
   <% end %>
 
 
-    <% if @entry.avatar_url %>
-      <p>Current file: <%= image_tag(@entry.avatar_url) %></p>
-    <% end %>
-
     <div class="row">
       <div class="field col-md-4 fake-button">
         <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"> <br/>
         <span class="carrierwave-wave-field">
           <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
           <h1>Select File</h1>
+          <p>Image size should be: [TBD]</p>
           <%= f.file_field :avatar, id: "avatar-upload" %>
         </span>
       </div>
