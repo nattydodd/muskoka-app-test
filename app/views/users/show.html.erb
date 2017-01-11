@@ -91,7 +91,6 @@
       <div class="buttons-container">
          <button class="filter-button">al_dente</button>
          <button class="filter-button">athena</button>
-         <button class="filter-button">audrey</button>
          <button class="filter-button">aurora</button>
          <button class="filter-button">daguerre</button>
          <button class="filter-button">eucalyptus</button>
@@ -114,7 +113,9 @@
 
       <div class="row">
         <div class="col-md-5 story-column">
-          <%= @user.entry.story %>
+          <div class="story">
+            <%= @user.entry.story %>
+          </div>
           <div class="submit-button">
             <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
           </div>
@@ -129,7 +130,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
 
       <div class="container-fluid share-section">
         <div class="row">
@@ -137,11 +138,19 @@
             <div class="test-your-knowledge">
               <h2>TEST YOUR CANADIANA KNOWLEDGE & RECEIVE 10 EXTRA VOTES</h2>
               <button>TAKE THE QUIZ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid challenge-section">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="test-your-knowledge">
               <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
               <button>SHARE CHALLENGE</button>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -162,13 +171,19 @@
 </div>
   <!-- end of condition of whether entry exists -->
 
-<div class="container-fluid thanks-for-voting">
-  <% if @user.vote %>
-    <h1>Thank you for voting!</h1>
-    <h1> You voted for: </h1>
-
-      <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>
-      <%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %>
-
-  <% end %>
+<% if @user.vote %>
+  <div class="container-fluid thanks-for-voting">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-1">
+        <h1 class="thankyou ty-top">Thank you for voting!</h1>
+        <h1 class="thankyou"> You voted for: </h1>
+        <h1 class="thankyou"><%= @user.vote.entry.name %></h1>
+        <span class="submit-button"><%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %></span>
+      </div>
+      <div class="col-md-5">
+        <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>
+      </div>
+    </div>
   </div>
+
+<% end %>

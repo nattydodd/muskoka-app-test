@@ -227,6 +227,13 @@ $secondary4: #e5e3e3;
 
 // User show
 
+.filter-button {
+  background: $secondary4;
+  border-radius: 3px;
+  border: none;
+  padding: 5px 10px;
+}
+
 .your-entry {
   margin-top: 50px;
   text-align: center;
@@ -239,9 +246,13 @@ $secondary4: #e5e3e3;
   margin: 10px;
 }
 
+.fa-facebook, .fa-instagram, .fa-twitter {
+   font-size: 3rem !important;
+}
+
 .take-the-quiz {
-  height: 500px;
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
+  // height: 400px;
+  // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
   background-repeat: none;
   background-size: cover;
 }
@@ -249,14 +260,37 @@ $secondary4: #e5e3e3;
 .thanks-for-voting {
   img {
     max-width: 400px;
+    margin: 50px;
+    border: 5px solid white;
+    border-radius: 5px;
   }
+  background: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
+  // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-size: cover;
+}
+
+.thankyou {
+  color: $secondary4;
+  font-family: $font-regular;
+  font-size: 3rem;
+}
+
+.ty-top {
+  font-size: 3.5rem;
+  margin-top: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .share-section {
-  height: 500px;
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  // height: 500px;
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
   background-repeat: none;
   background-size: cover;
+}
+
+.challenge-section {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
 }
 
 .user-story {
@@ -271,9 +305,7 @@ $secondary4: #e5e3e3;
 }
 
 .test-your-knowledge {
-  margin-top: 17%;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 100px;
   text-align: center;
   font-family: $font-regular;
   h1 {
@@ -305,6 +337,8 @@ $secondary4: #e5e3e3;
 #entry_image img {
   max-width: 600px;
   margin-top: 40px;
+  border: 5px solid $secondary4;
+  border-radius: 5px;
 }
 
 .filter-button {
@@ -320,4 +354,15 @@ $secondary4: #e5e3e3;
   margin: auto;
   display: block;
   margin-bottom: 40px;
+  margin-top: 10px;
+  background: $secondary1;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 2rem;
+  color: $secondary4;
+  border: none;
+}
+
+.buttons-container {
+  text-align: center;
 }
