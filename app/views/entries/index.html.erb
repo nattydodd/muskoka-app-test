@@ -25,6 +25,17 @@
               <% else %>
                 <%= link_to image_tag(entry.avatar_url), entry_path(entry) %>
               <% end %>
+              <div class="hover-content-smaller-top">
+                <span class="hover-user smaller"><%= entry.user.name %></span><br>
+                <span class="hover-title smaller">TITLE HEADER POST</span><br>
+                <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span>
+              </div>
+              <div class="hover-content-smaller">
+                <span class="hover-share">SHARE</span><br>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </div>
           </div>
         <% end %>
       </div>
