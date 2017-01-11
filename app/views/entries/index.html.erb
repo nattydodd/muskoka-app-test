@@ -19,11 +19,11 @@
     <% @entries.in_groups_of(4, false).each do |group| %>
       <div class="row">
         <% group.each do |entry| %>
-          <div class="col-md-3 all-images">
+            <div class="col-md-3 all-images" data-link="<%= entry_path(entry) %>">
               <% if entry.filter %>
-                <%= link_to image_tag(entry.filter), entry_path(entry) %>
+                <%= link_to image_tag(entry.filter) %>
               <% else %>
-                <%= link_to image_tag(entry.avatar_url), entry_path(entry) %>
+                <%= link_to image_tag(entry.avatar_url) %>
               <% end %>
               <div class="hover-content-smaller-top">
                 <span class="hover-user smaller"><%= entry.user.name %></span><br>

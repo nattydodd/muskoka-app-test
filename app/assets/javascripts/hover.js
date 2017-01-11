@@ -1,10 +1,11 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
 
-  $(".image-block").on("hover", function(){
-
-    var votes = $(this).data("votes");
-    
-
+  $(".all-images").on("click", function() {
+    var link = $(this).data("link");
+    console.log(link);
+    window.location.href = link
   });
+
+
 
 });
