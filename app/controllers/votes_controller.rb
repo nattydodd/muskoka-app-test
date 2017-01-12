@@ -15,12 +15,12 @@ class VotesController < ApplicationController
     @entry = Entry.find(params[:entry_id])
 
 
-    if @entry.votes.where(voter_ip: request.remote_ip).empty?
+   if @entry.votes.where(voter_ip: request.remote_ip).empty?
       @vote = @entry.votes.create(params[:entry_vote])
 
-
-
-      if @vote.errors.any?
+      if @vote.save
+        VoteMailer.vote_confirmation(@vote).deliver
+      else
         @vote.errors.full_messages
         render "entries/show"
       end
@@ -39,6 +39,19 @@ class VotesController < ApplicationController
     @vote.destroy
     @entries = Entry.all
     redirect_to entries_path
+  end
+
+
+  def confirm_email
+    vote = Vote.find_by_confirm_token(params[:id])
+    if vote
+      vote.email_activate
+      flash[:success] = "Thank You for voting!"
+      redirect_to root_url
+    else
+      flash[:error] = "Sorry. There was an error"
+      redirect_to root_url
+    end
   end
 
   private
