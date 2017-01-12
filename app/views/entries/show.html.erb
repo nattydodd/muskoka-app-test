@@ -48,8 +48,6 @@
       <%= @entry.story %>
       <h4><em>- <%= @entry.name %></em></h4>
     </div>
-    <%= link_to "Vote", entry_votes_path(@entry), :method => 'post' %>
-    <%= @entry.votes.count %>
   </div>
 
   <div class="col-md-5 col-md-offset-1 voting status">
@@ -65,9 +63,31 @@
       <h2>This is your submission </h2>
     <% else %>
     <div class="row">
-      <%#= form_for [@entry, @vote] do |f| %>
-          <%#= f.submit "Vote for #{@entry.name.partition(" ").first}", id: "vote-for" %>
-      <%# end %>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#voteModal">
+        Vote for <%= @entry.name.partition(" ").first %>
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="voteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">CAST YOUR VOTE</h5>
+            </div>
+            <div class="modal-body">
+              <%= form_tag(entry_votes_path(@entry), method: "POST", :validate=>true) do %>
+                  <%= text_field_tag :email, nil, :required => true %><br><br>
+                  <%= submit_tag "Vote for #{@entry.name.partition(" ").first}", id: "vote-for" %>
+                  <h3>You will be emailed a link to validate your vote. Please check your inbox to complete the voting process</h3>
+              <% end %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <% end %>
   </div>

@@ -14,13 +14,24 @@ class VotesController < ApplicationController
 
     @entry = Entry.find(params[:entry_id])
 
+
     if @entry.votes.where(voter_ip: request.remote_ip).empty?
-      @entry.votes.create(params[:entry_vote])
+      @vote = @entry.votes.create(params[:entry_vote])
+
+
+
+      if @vote.errors.any?
+        @vote.errors.full_messages
+        render "entries/show"
+      end
     end
 
-    respond_to do |format|
-      format.html {redirect_to root_url}
-    end
+
+
+    #
+    # respond_to do |format|
+    #   format.html {redirect_to root_url}
+    # end
   end
 
   def destroy
@@ -32,7 +43,7 @@ class VotesController < ApplicationController
 
   private
   def vote_params
-    params.permit(:entry_id)
+    params.permit(:entry_id, :email)
   end
 
   def load_entry
