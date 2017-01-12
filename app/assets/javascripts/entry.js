@@ -42,7 +42,7 @@ if (window.location.href.indexOf("users") > -1) {
       var filterName = 'e_art:' + $(this).html() + '/';
 
       // add the filter to the middle of it
-      var filtered = FIRST + "upload/" + filterName + LAST
+      var filtered = FIRST + "upload/w_300,g_north_west,x_20,y_20,l_MyCanada-01_xpwb69/" + filterName + LAST
 
       // assign it to the image
       $('#entry_image img').attr('src', filtered );
@@ -61,5 +61,5 @@ if (window.location.href.indexOf("users") > -1) {
     });
 
   }
-  
+
 });

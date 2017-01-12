@@ -48,6 +48,7 @@
       <%= @entry.story %>
       <h4><em>- <%= @entry.name %></em></h4>
     </div>
+    <%= link_to(entry_votes_path(@entry), :method => 'post') do %>
   </div>
 
   <div class="col-md-5 col-md-offset-1 voting status">
