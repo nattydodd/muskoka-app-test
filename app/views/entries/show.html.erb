@@ -48,25 +48,26 @@
       <%= @entry.story %>
       <h4><em>- <%= @entry.name %></em></h4>
     </div>
-    <%= link_to(entry_votes_path(@entry), :method => 'post') do %>
+    <%= link_to "Vote", entry_votes_path(@entry), :method => 'post' %>
+    <%= @entry.votes.count %>
   </div>
 
   <div class="col-md-5 col-md-offset-1 voting status">
     <div class="vote-count row">
       <h2>Total Votes: <%= @entry.votes.count %></h2>
     </div>
-    <% if current_user.vote %>
+    <% if current_user && current_user.vote %>
       <% if current_user.vote.entry_id == @entry.id %>
         <h1>Voted</h1>
       <% end %>
       <h3>You have already cast your vote. To delete your previous vote, visit your profile page.</h3>
-    <% elsif current_user.entry == @entry %>
+    <% elsif current_user && current_user.entry == @entry %>
       <h2>This is your submission </h2>
     <% else %>
     <div class="row">
-      <%= form_for [@entry, @vote] do |f| %>
-          <%= f.submit "Vote for #{@entry.name.partition(" ").first}", id: "vote-for" %>
-      <% end %>
+      <%#= form_for [@entry, @vote] do |f| %>
+          <%#= f.submit "Vote for #{@entry.name.partition(" ").first}", id: "vote-for" %>
+      <%# end %>
     </div>
     <% end %>
   </div>

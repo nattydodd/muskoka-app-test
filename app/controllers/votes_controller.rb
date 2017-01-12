@@ -3,13 +3,23 @@ class VotesController < ApplicationController
   before_action :load_entry
 
   def create
-    @vote = @entry.votes.build(vote_params)
-    @vote.user = current_user
+    # @vote = @entry.votes.build(vote_params)
+    # @vote.user = current_user
+    #
+    # if @vote.save
+    #   redirect_to entries_path, notice: 'Vote received!'
+    # else
+    #   render 'entries/show'
+    # end
 
-    if @vote.save
-      redirect_to entries_path, notice: 'Vote received!'
-    else
-      render 'entries/show'
+    @entry = Entry.find(params[:entry_id])
+
+    if @entry.votes.where(voter_ip: request.remote_ip).empty?
+      @entry.votes.create(params[:entry_vote])
+    end
+
+    respond_to do |format|
+      format.html {redirect_to root_url}
     end
   end
 
