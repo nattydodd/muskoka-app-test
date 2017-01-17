@@ -2,8 +2,8 @@ class VotesController < ApplicationController
 
   before_action :load_entry
 
+
   def create
-    # @vote = @entry.votes.build(vote_params)
     # @vote.user = current_user
     #
     # if @vote.save
@@ -12,25 +12,25 @@ class VotesController < ApplicationController
     #   render 'entries/show'
     # end
 
-    @entry = Entry.find(params[:entry_id])
+    # @entry = Entry.find(params[:id])
 
 
    if @entry.votes.where(voter_ip: request.remote_ip).empty?
-      @vote = @entry.votes.create(params[:entry_vote])
-
+        @vote = @entry.votes.build(vote_params)
+        # @vote.entry_id = @entry.id
       if @vote.save
         VoteMailer.vote_confirmation(@vote).deliver
+        redirect_to entries_path
       else
-        @vote.errors.full_messages
         render "entries/show"
       end
-    end
+   end
 
 
 
     #
     # respond_to do |format|
-    #   format.html {redirect_to root_url}
+    #   format.html
     # end
   end
 
@@ -56,7 +56,7 @@ class VotesController < ApplicationController
 
   private
   def vote_params
-    params.permit(:entry_id, :email)
+    params.require(:vote).permit(:email, :entry_id, :voter_ip)
   end
 
   def load_entry

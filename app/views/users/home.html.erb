@@ -100,7 +100,7 @@
         <div class="hover-content">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
-          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
           <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
           <span class="hover-share">SHARE</span><br>
           <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -119,7 +119,7 @@
         <div class="hover-content">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
-          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
           <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
           <span class="hover-share">SHARE</span><br>
           <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -136,7 +136,7 @@
         <div class="hover-content">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
-          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.count %> VOTES </h3></span><br>
+          <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
           <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
           <span class="hover-share">SHARE</span><br>
           <i class="fa fa-instagram" aria-hidden="true"></i>

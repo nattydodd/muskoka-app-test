@@ -7,11 +7,13 @@ class Vote < ApplicationRecord
 
   validates_uniqueness_of :voter_ip, :message => "already voted"
   validates_presence_of :email, :message => "you must provide your email address"
+  validates_uniqueness_of :email, :message => "already voted"
 
   def email_activate
     self.email_confirmed = true
     self.confirm_token = nil
-    # save!(:validate => false)
+    save!
+    # (:validate => false)
   end
 
   private

@@ -3,7 +3,8 @@ class VoteMailer < ActionMailer::Base
 
   def vote_confirmation(vote)
      @vote = vote
-     mail(:to => "#{vote.email} <#{vote.email}>", :subject => "Vote Confirmation")
+     @entry = @vote.entry
+     mail(:to => "#{@vote.email} <#{@vote.email}>", :subject => "Vote Confirmation")
   end
 
 end

@@ -36,9 +36,9 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
 
-    if current_user
+    # if current_user
       @vote = @entry.votes.build
-    end
+    # end
 
     respond_to do |format|
       format.html
