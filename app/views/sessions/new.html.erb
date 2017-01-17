@@ -4,17 +4,17 @@
     <h1>Please Login</h1>
 
     <%= form_tag sessions_path do %>
-      <div class="field">
+      <div class="field login-title">
         <%= text_field_tag :email, params[:email], placeholder: "Email" %>
       </div>
       <div class="field password-field">
         <%= label_tag :password, "Password" %>
-        <%= password_field_tag :password, placeholder: "Password" %>
+        <%= password_field_tag :password %>
       </div>
       <br>
-      <div class="actions log-in"><%= submit_tag "Log in" %></div>
+      <div class="actions log-in"><%= submit_tag "Log in", id:"login-button" %></div>
     <% end %>
     <h1>Or Create Account</h1>
-    <button class="submit-button account"><a href="/#enter-now">SIGN UP</button>
+    <button class="account" id="signup-link"><a href="/#enter-now">SIGN UP</button>
   </div>
 </div>

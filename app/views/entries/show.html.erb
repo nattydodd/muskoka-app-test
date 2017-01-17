@@ -61,24 +61,26 @@
       <h3>You have already cast your vote. To delete your previous vote, visit your profile page.</h3>
     <% elsif current_user && current_user.entry == @entry %>
       <h2>This is your submission </h2>
+    </div>
     <% else %>
     <div class="row">
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#voteModal">
+      <button type="button" class="button-main" data-toggle="modal" data-target="#voteModal">
         Vote for <%= @entry.name.partition(" ").first %>
       </button>
+    </div>
 
       <!-- Modal -->
       <div class="modal fade" id="voteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">CAST YOUR VOTE</h5>
+              <h3 class="modal-title" id="exampleModalLabel">CAST YOUR VOTE</h3>
             </div>
             <div class="modal-body">
               <%= form_for([@entry, @vote]) do |f| %>
-                  <%= f.text_field :email %><br><br>
-                  <%= f.submit "Vote for #{@entry.name.partition(" ").first}", id: "vote-for" %>
-                  <h3>You will be emailed a link to validate your vote. Please check your inbox to complete the voting process</h3>
+                  <%= f.text_field :email, required: true, class:"well email-well" %><br><br>
+                  <%= f.submit "Vote for #{@entry.name.partition(" ").first}", class:"button-main", id:"vote-for" %>
+                  <h4>You will be emailed a link to validate your vote. Please check your inbox to complete the voting process</h4>
               <% end %>
             </div>
             <div class="modal-footer">
@@ -89,7 +91,19 @@
       </div>
 
     </div>
-    <% end %>
   </div>
+  <div class="container-fluid share-section">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 take-the-quiz">
+        <div class="test-your-knowledge">
+          <h2>TEST YOUR CANADIANA KNOWLEDGE & GIVE 10 EXTRA VOTES TO <%= @entry.name.partition(" ").first.upcase %></h2>
+          <button>TAKE THE QUIZ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <% end %>
+
 
 </div>

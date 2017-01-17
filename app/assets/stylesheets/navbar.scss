@@ -9,7 +9,11 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 
 .text-link {
-  color: $secondary1;
+  color: $primary3;
+  &:hover {
+    color: $secondary4;
+    text-decoration: none;
+  }
 }
 
 
@@ -23,6 +27,7 @@ $secondary4: #e5e3e3;
 .nav>li>a {
   padding-left: 30px !important;
   padding-right: 30px !important;
+  font-family: $font-regular;
 }
 
 .navbar-default {
@@ -36,16 +41,13 @@ $secondary4: #e5e3e3;
 
 .navbar-default .navbar-nav>li>a{
   color: $primary1 !important;
-
-  &:focus, &:hover {
-    color: $primary2 !important;
-    text-decoration: none !important;
-  }
 }
 
-a:focus, a:hover {
-  color: $primary2 !important;
-  text-decoration: none !important;
+.navbar-default .navbar-nav>li {
+  &:focus, &:hover {
+    background: white;
+    text-decoration: none !important;
+  }
 }
 
 .t_c {

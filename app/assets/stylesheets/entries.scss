@@ -45,11 +45,10 @@ $secondary4: #e5e3e3;
 }
 
 .submit-button, #hero-button {
-  margin-top: 10px;
-  background: $secondary1;
+  margin-top: 20px;
   text-decoration: none;
   display: inline-block;
-  padding: 10px 15px;
+  // padding: 10px 15px;
   font-size: 2rem;
   a {
     color: $secondary4;
@@ -131,6 +130,13 @@ $secondary4: #e5e3e3;
 
 // Entry Show
 
+
+.email-well {
+  width: 100%;
+  margin-bottom: 0 !important;
+  height: 40px;
+}
+
 .entry-show-main {
   height: 600px;
   background-repeat: none;
@@ -200,6 +206,15 @@ $secondary4: #e5e3e3;
   padding: 10px 15px;
   font-family: $font-regular;
   font-size: 1.8rem;
+  &:hover {
+    background: $secondary4;
+    color: $primary1;
+    text-decoration: none;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+  }
 }
 
 .vote-count {
