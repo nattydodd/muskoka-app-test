@@ -19,4 +19,16 @@
               return false;
           }
       });
+
+
+    $("#hero-button").on("click", function(e) {
+      e.preventDefault();
+      console.log("scroll");
+
+          var section = $(this).attr("href");
+          $("html, body").animate({
+              scrollTop: $(section).offset().top
+          });
+        });
+
   });
