@@ -1,35 +1,39 @@
-<%= form_for @entry, html: { multipart: true } do |f| %>
+<div class="container-fluid">
+  <%= form_for @entry, html: { multipart: true } do |f| %>
 
-  <% if @entry.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% @entry.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-    <div class="row">
-      <div class="field col-md-4 fake-button">
-        <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"> <br/>
-        <span class="carrierwave-wave-field">
-          <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
-          <h1>Select File</h1>
-          <p>Image size should be: [TBD]</p>
-          <%= f.file_field :avatar, id: "avatar-upload" %>
-        </span>
+    <% if @entry.errors.any? %>
+      <div class="error_messages">
+        <h2>Form is invalid</h2>
+        <ul>
+          <% @entry.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
       </div>
+    <% end %>
 
-      <div class="field col-md-4 col-md-offset-1">
-        <%= f.text_area :story, size: "50x15", placeholder: "Tell us the story!", id: "story-box" %>
-      </div> <br>
-  </div>
 
-  <div class="actions submit-right col-md-2 col-md-offset-9">
-    <%= f.submit 'Submit' %>
-  </div>
+      <div class="row">
+        <div class="field col-md-5 col-sm-5 col-xs-11 fake-button">
+          <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"> <br/>
+          <span class="carrierwave-wave-field">
+            <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
+            <h1>Select File</h1>
+            <p>Image size should be: [TBD]</p>
+            <%= f.file_field :avatar, id: "avatar-upload" %>
+          </span>
+        </div>
 
-<% end %>
+        <div class="field col-md-6 col-sm-6 col-xs-11">
+          <%= f.text_area :story, size: "0x15", placeholder: "Tell us the story!", id: "story-box" %><br>
+          <div class="submit-right col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-12">
+            <%= f.submit 'Submit', class: "button-main edit-button" %>
+          </div>
+          <div class="delete-entry-container col-md-4 col-md-offset-8 col-sm-5 col-sm-offset-7 col-xs-12">
+            <%= link_to 'Delete Entry', "/entries/#{@user.entry.id}", method: :delete, data: {confirm: 'Are you sure?'}, class: "button-red delete-entry" %>
+          </div>
+        </div>
+    </div>
+
+  <% end %>
+</div>
