@@ -444,3 +444,27 @@ $secondary4: #e5e3e3;
     padding-left: 50px !important;
   }
 }
+
+@media (max-width: 855px) {
+  .bracket-text {
+    width: 90%;
+  }
+  .brackets img {
+    width:150%;
+  }
+  .bracket-text h3 {
+    font-size: 2.6vw;
+  }
+  .bracket-text h1 {
+    font-size: 5vw;
+  }
+  .your-adventure {
+    height: 520px;
+  }
+}
+
+@media (max-width: 775px) {
+  // .bracket-text h3 {
+  //   font-size: 20px;
+  // }
+}
