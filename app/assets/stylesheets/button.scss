@@ -20,6 +20,13 @@ $secondary4: #e5e3e3;
   font-size: 2rem;
 
   &:hover {
+    a {
+      color: $primary1;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
     background: $secondary4;
     color: $primary1;
     text-decoration: none;

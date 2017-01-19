@@ -5,17 +5,17 @@
 
   <div class="col-md-8 col-md-offset-2 this-is">
     <div class="row this-is-row">
-      <div class="col-md-2 left-bracket">
+      <div class="col-md-2 col-sm-2 col-xs-2 left-bracket">
         <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-05_vx1mwe.svg") %>
       </div>
-      <div class="col-md-4 this-is-text">
+      <div class="col-md-4 col-sm-4 col-xs-6 this-is-text">
         <h1>This is<br>
             Your</h1>
       </div>
-      <div class="col-md-4 maple-leaf">
+      <div class="col-md-4 col-sm-4 col-xs-4 maple-leaf">
         <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483475882/RTO12Logo_01-03_qybe52.svg") %>
       </div>
-      <div class="col-md-2 right-bracket">
+      <div class="col-md-2 col-sm-2 col-xs-2 right-bracket">
         <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-08_inh4io.svg") %>
       </div>
     </div>
@@ -33,14 +33,14 @@
   <div class="row your-entry">
   </div>
   <div class="row user-show-bottom">
-    <div class="col-md-5 col-md-offset-1 entry-image-focus">
+    <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 entry-image-focus">
       <% if @user.entry.filter %>
         <%= image_tag(@user.entry.filter) %>
       <% else %>
         <%= image_tag(@user.entry.avatar_url) %>
       <% end %>
     </div>
-    <div class="col-md-5 user-story">
+    <div class="col-md-5 col-sm-5 user-story">
       <%= @user.entry.story %><br>
       <div class="submit-button">
         <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
@@ -181,34 +181,13 @@
 </div>
   <!-- end of condition of whether entry exists -->
 
-<% if @user.vote %>
-
   <div class="container-fluid thanks-for-voting">
     <div class="row">
-      <div class="col-md-5 col-md-offset-1">
-        <h1 class="thankyou ty-top">Thank you for voting!</h1>
-        <h1 class="thankyou"> You voted for: </h1>
-        <h1 class="thankyou"><%= @user.vote.entry.name %></h1>
-        <span class="submit-button"><%= link_to "Remove Vote", "/entries/#{@user.vote.entry_id}/votes/#{@user.vote.id}", method: :delete, data: {confirm: 'Are you sure?'} %></span>
-      </div>
-      <div class="col-md-5">
-        <%= link_to image_tag(@user.vote.entry.filter), entry_path(@user.vote.entry) %>
-      </div>
-    </div>
-  </div>
-
-  <% else %>
-
-  <div class="container-fluid thanks-for-voting">
-    <div class="row">
-      <div class="col-md-5 col-md-offset-1">
-        <h1 class="thankyou ty-top">Don't forget to cast your vote!</h1>
-        <button class="submit-button"><a href="/entries">VOTE NOW</a></button>
+      <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
+        <h1 class="thankyou ty-top">Check out your competition!</h1>
+        <button class="submit-button button-main"><a href="/entries">VIEW ENTRIES</a></button>
       </div>
       <div class="col-md-5">
       </div>
     </div>
   </div>
-
-
-<% end %>

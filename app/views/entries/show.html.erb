@@ -1,21 +1,18 @@
 <div class="container-fluid entry-show-main">
 
-  <div class="col-md-8 col-md-offset-2 this-is">
+  <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 this-is">
     <div class="row this-is-row">
-      <div class="col-md-2 left-bracket">
-        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-05_vx1mwe.svg") %>
-      </div>
-      <div class="col-md-4 this-is-text">
+      <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-4 col-xs-offset-2 this-is-text">
+        <span class="left-bracket"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-05_vx1mwe.svg") %></span>
         <h1>This is<br>
            <%= @entry.name.partition(" ").first %>'s</h1>
       </div>
-      <div class="col-md-4 maple-leaf">
+      <div class="col-md-4 col-sm-4 col-xs-4 maple-leaf">
         <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483475882/RTO12Logo_01-03_qybe52.svg") %>
-      </div>
-      <div class="col-md-2 right-bracket">
-        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-08_inh4io.svg") %>
+        <span class="right-bracket"><%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483477142/Brackets-08_inh4io.svg") %></span>
       </div>
     </div>
+
   </div>
 
   <% if @entry.filter %>
