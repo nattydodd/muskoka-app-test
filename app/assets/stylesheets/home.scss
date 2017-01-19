@@ -60,9 +60,10 @@ $secondary4: #e5e3e3;
 }
 
 .brackets {
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   img {
-    max-width: 800px;
+    max-width: 900px;
   }
 }
 
@@ -70,6 +71,7 @@ $secondary4: #e5e3e3;
   position: absolute;
   top: 15%;
   left: 16%;
+  width: 55%;
   h1 {
     color: white;
     font-size: 4.5rem;
@@ -78,7 +80,7 @@ $secondary4: #e5e3e3;
     font-weight: 700;
     margin-bottom: 30px;
   }
-  h4 {
+  h3 {
     color: white;
     font-family: $font-regular;
   }
@@ -366,12 +368,25 @@ $secondary4: #e5e3e3;
   }
 }
 
+@media (max-width: 1800px) {
+  .bracket-text {
+    width: 63%;
+  }
+}
+
 @media (max-width: 1600px) {
   .green-board {
     height: 500px;
   }
   .board-text {
     margin-top: 150px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .bracket-text {
+    width: 77%;
+    margin-left: 20px;
   }
 }
 
@@ -396,6 +411,21 @@ $secondary4: #e5e3e3;
   .board-text h2 {
     font-size: 3.5rem;
   }
+  .bracket-text {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .bracket-text {
+    width: 80%;
+    h1 {
+      margin-bottom: 0;
+    }
+    h3 {
+      margin-top:0;
+    }
+  }
 }
 
 @media (max-width: 990px) {
@@ -405,5 +435,8 @@ $secondary4: #e5e3e3;
   }
   .green-board {
     margin: 0;
+  }
+  .bracket-text {
+    margin-left: 45px;
   }
 }
