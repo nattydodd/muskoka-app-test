@@ -36,3 +36,26 @@ $secondary4: #e5e3e3;
     transition: background .3s ease-in-out;
   }
 }
+
+
+.button-red {
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: $primary2;
+  border: none;
+  color: $secondary4;
+  font-size: 2rem;
+  a:hover {
+    text-decoration:none;
+    color: $primary1;
+  }
+  &:hover {
+    background: $secondary4;
+    color: $primary1;
+    text-decoration: none;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+  }
+}

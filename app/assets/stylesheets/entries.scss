@@ -238,15 +238,40 @@ $secondary4: #e5e3e3;
   padding: 20px;
   margin-left: 2% !important;
   font-family: $font-regular;
+  h1 {
+    margin-top:0;
+  }
 }
 
 .action-left {
   text-align: left !important;
 }
 
+@media (max-width:1100px) {
+  .entry-show-main {
+    height: 500px;
+    &:before {
+      height: 500px;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .this-is-text h1 {
     font-size: 9.7vw;
+  }
+  .entry-show-main {
+    height: 400px;
+    &:before {
+      height: 400px;
+    }
+  }
+  .this-is-row {
+    padding-top: 145px;
+  }
+  .entry-story {
+    margin-top: 30px;
+    margin-right: 20px;
   }
 }
 

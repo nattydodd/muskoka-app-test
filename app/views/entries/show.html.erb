@@ -33,24 +33,23 @@
 
 <div class="container-fluid entry-show-main-bottom">
   <div class="row entry-show-bottom">
-    <div class="col-md-5 col-md-offset-1 entry-image-focus">
+    <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 entry-image-focus">
       <% if @entry.filter %>
         <%= image_tag(@entry.filter) %>
       <% else %>
         <%= image_tag(@entry.avatar_url) %>
       <% end %>
     </div>
-    <div class="col-md-5 entry-story">
+    <div class="col-md-5 col-sm-5 entry-story">
       <h1>Story Title</h1>
       <%= @entry.story %>
       <h4><em>- <%= @entry.name %></em></h4>
     </div>
   </div>
 
-  <div class="col-md-5 col-md-offset-1 voting status">
+  <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 voting status">
     <div class="vote-count row">
       <h2>Total Votes: <%= @entry.votes.where(email_confirmed: true).count %></h2>
-    </div>
     <% if current_user && current_user.vote %>
       <% if current_user.vote.entry_id == @entry.id %>
         <h1>Voted</h1>
@@ -58,6 +57,7 @@
       <h3>You have already cast your vote. To delete your previous vote, visit your profile page.</h3>
     <% elsif current_user && current_user.entry == @entry %>
       <h2>This is your submission </h2>
+    </div>
     </div>
     <% else %>
     <div class="row">
