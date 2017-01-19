@@ -49,15 +49,20 @@
 
   <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 voting status">
     <div class="vote-count row">
+      <span class="hover-share">SHARE</span><br>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
       <h2>Total Votes: <%= @entry.votes.where(email_confirmed: true).count %></h2>
     <% if current_user && current_user.entry == @entry %>
-      <h2>This is your submission </h2>
+      <h3><em>This is your submission</em></h3>
+    </div>
+  </div>
     <% else %>
       <button type="button" class="button-main" data-toggle="modal" data-target="#voteModal">
         Vote for <%= @entry.name.partition(" ").first %>
       </button>
-    </div>
-  </div>
+
 
       <!-- Modal -->
       <div class="modal fade" id="voteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -3,15 +3,18 @@
   <section class="top-section">
     <div class="container">
       <div class="row">
-        <div class="logo col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+        <div class="logo col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
           <div class="hero-images">
             <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg") %>
           </div>
         </div>
-        <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-4 enter-now-container">
-          <a class="button-main" id="hero-button" href="#enter-now">ENTER NOW</a>
-        </div>
       </div>
+      <div class="enter-now-container">
+        <a class="button-main" id="hero-button" href="#enter-now">ENTER NOW</a>
+      </div>
+        <!-- <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-4 col-xs-2 col-xs-offset-4 enter-now-container">
+          <a class="button-main" id="hero-button" href="#enter-now">ENTER NOW</a>
+        </div> -->
     </div>
   </section>
 
@@ -33,40 +36,40 @@
           <ul class="rules">
             <li class="rules-text">
               <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                   <i class="fa fa-check-square" aria-hidden="true"></i>
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-8 col-sm-8 col-xs-8">
                   <p>Sign Up<p>
                 </div>
               </div>
             </li>
             <li class="rules-text">
               <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                   <i class="fa fa-check-square" aria-hidden="true"></i>
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-8 col-sm-8 col-xs-8">
                   <p class="instructions">Submit Your entry with a photo & story - don't forget to choose a filter<p>
                 </div>
               </div>
             </li>
             <li class="rules-text">
               <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                   <i class="fa fa-check-square" aria-hidden="true"></i>
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-8 col-sm-8 col-xs-8">
                   <p class="instructions">Visit your profile for ways to share and promote your submission<p>
                 </div>
               </div>
             </li>
             <li class="rules-text">
               <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                   <i class="fa fa-check-square" aria-hidden="true"></i>
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-8 col-sm-8 col-xs-8">
                   <p>Watch your votes go up!<p>
                 </div>
               </div>
@@ -99,13 +102,12 @@
   <section class="container-fluid entries-last-six">
     <div class="row flex-md-top">
     <% @entries.last(2).each do |entry| %>
-      <div class="col-md-6 image-block">
+      <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
         <%= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
-          <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
         </div>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
@@ -120,13 +122,12 @@
     </div>
     <div class="row flex-md-middle">
     <% @entries.offset(2).last(2).each do |entry| %>
-      <div class="col-md-6 image-block">
+      <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
         <%= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
-          <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
         </div>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>
@@ -139,13 +140,12 @@
     </div>
     <div class="row flex-md-bottom">
     <% @entries.offset(4).last(2).each do |entry| %>
-      <div class="col-md-6 image-block">
+      <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
         <%= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
-          <span class="hover-more"><i class="fa fa-plus" aria-hidden="true"></i><%= link_to "SEE MORE", entry_path(entry) %></span><br>
         </div>
         <div class="hover-content-bottom">
           <span class="hover-share">SHARE</span><br>

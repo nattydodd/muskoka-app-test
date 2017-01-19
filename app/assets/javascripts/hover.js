@@ -6,5 +6,11 @@ $(document).on('turbolinks:load', function() {
     window.location.href = link
   });
 
+  $(".image-block").on("click", function() {
+    var link = $(this).data("link");
+    console.log(link);
+    window.location.href = link
+  });
+
 
 });

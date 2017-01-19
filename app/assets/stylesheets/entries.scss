@@ -204,7 +204,7 @@ $secondary4: #e5e3e3;
 }
 
 .entry-show-main-bottom {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  background-color: $secondary4;
   background-size: cover;
   background-repeat: none;
   padding-bottom:50px;
@@ -231,6 +231,10 @@ $secondary4: #e5e3e3;
 
 .vote-count {
   font-family: $font-regular;
+  margin-top: 20px;
+  i {
+    color: #7d7272;
+  }
 }
 
 .entry-story {
