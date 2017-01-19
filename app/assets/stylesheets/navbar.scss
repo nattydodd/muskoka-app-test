@@ -53,6 +53,13 @@ $secondary4: #e5e3e3;
 .t_c {
   text-align: center;
   margin-bottom: 20px;
+  h5 {
+    color: white !important;
+  }
+  .text-link {
+    color: white !important;
+    border-bottom: 1px solid white;
+  }
 }
 
 .navbar-right {

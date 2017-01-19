@@ -30,7 +30,13 @@
         <div class="collapse navbar-collapse" id="navbar">
               <ul class="nav navbar-nav navbar-right">
                 <li id="/"><%= link_to 'Home', root_path %></li>
-                <li id="new"><%= link_to 'Enter', new_entry_path %></li>
+                <li id="new">
+                  <% if current_user %>
+                    <%= link_to 'Enter', new_entry_path %>
+                  <% else %>
+                    <%= link_to 'Enter', "#enter-now", id:"enter-nav-scroll" %>
+                  <% end %>
+                </li>
                 <li id="entries"><%= link_to 'Vote', entries_path %></li>
                 <li id="about"><%= link_to 'About', about_path %></li>
 

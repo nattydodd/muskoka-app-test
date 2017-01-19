@@ -9,9 +9,35 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 
 
+.more-posts-button {
+  text-align: center;
+  padding: 70px;
+  a {
+    background-color: $secondary1;
+    border-radius: 5px;
+    border: 3px solid $secondary4;
+    color: $secondary4;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    font-family: $font-regular;
+    font-size: 2rem;
+
+    &:hover {
+      background: $secondary4;
+      text-decoration: none;
+      color: $primary1;
+      -webkit-transition: background .3s ease-in-out;
+      -moz-transition: background .3s ease-in-out;
+      -o-transition: background .3s ease-in-out;
+      transition: background .3s ease-in-out;
+    }
+  }
+}
+
+
 .button-main {
   border: 3px solid $secondary4;
-  background: rgba(0, 0, 0, 0.25);
+  background: $secondary1;
   border-radius: 5px;
   color: $secondary4;
   padding: 6px 16px;
@@ -27,7 +53,7 @@ $secondary4: #e5e3e3;
         cursor: pointer;
       }
     }
-    background: $secondary4;
+    background: white;
     color: $primary1;
     text-decoration: none;
     -webkit-transition: background .3s ease-in-out;
@@ -45,12 +71,13 @@ $secondary4: #e5e3e3;
   border: none;
   color: $secondary4;
   font-size: 2rem;
+  text-transform: uppercase;
   a:hover {
     text-decoration:none;
     color: $primary1;
   }
   &:hover {
-    background: $secondary4;
+    background: white;
     color: $primary1;
     text-decoration: none;
     -webkit-transition: background .3s ease-in-out;
