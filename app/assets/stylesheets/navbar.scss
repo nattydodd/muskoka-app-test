@@ -28,25 +28,40 @@ $secondary4: #e5e3e3;
   padding-left: 30px !important;
   padding-right: 30px !important;
   font-family: $font-regular;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $primary1;
 }
 
 .navbar-default {
-  background-color: #e7e7e7 !important;
+  background-color: white !important;
+  border-color: #7d7d7d !important;
 }
 
 .navbar-default .active>a {
-  background-color: white !important;
-  color: $primary1 !important;
+  background-color: gainsboro !important;
+  color: white !important;
 }
 
 .navbar-default .navbar-nav>li>a{
-  color: $primary1 !important;
+  color: #525151 !important;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .navbar-default .navbar-nav>li {
   &:focus, &:hover {
-    background: white;
+    background: gainsboro;
+    cursor: pointer;
     text-decoration: none !important;
+    li a {
+      color: white;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 

@@ -161,7 +161,7 @@ $secondary4: #e5e3e3;
 
   input {
     border: 3px solid $secondary4;
-    background: $secondary1;
+    background: #949494;
     border-radius: 5px;
     color: $secondary4;
     padding: 6px 16px;
@@ -231,6 +231,9 @@ $secondary4: #e5e3e3;
     .hover-content-bottom {
       display: block;
     }
+    .hover-content-bottom-right {
+      display: block;
+    }
   }
 }
 
@@ -260,6 +263,34 @@ $secondary4: #e5e3e3;
   display: none;
   color: white;
   font-family: $font-regular;
+}
+
+.hover-content-bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  color: white;
+  font-family: $font-regular;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  a {
+    color: white;
+  }
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+  &:hover {
+    background: white;
+    transition-property: background, color;
+    transition-duration: .5s;
+    a {
+      color: $primary1;
+    }
+  }
 }
 
 .hover-user {
@@ -298,6 +329,8 @@ $secondary4: #e5e3e3;
   bottom: 20px;
   right: 20px;
 }
+
+
 
 .image-block:hover::before {
   background-color: rgba(0, 0, 0, 0.7);

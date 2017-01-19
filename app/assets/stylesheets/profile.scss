@@ -75,7 +75,8 @@ $secondary4: #e5e3e3;
 }
 
 .challenge-section {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  background-color: $secondary4;
+  // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
 }
 
 .user-story {
@@ -99,6 +100,29 @@ $secondary4: #e5e3e3;
   button {
     border: none;
     color: $secondary4;
+  }
+}
+
+.challenge-friends {
+  margin: 100px;
+  text-align: center;
+  font-family: $font-regular;
+  button {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: $primary2;
+    border: none;
+    color: $secondary4;
+    font-size: 2rem;
+    &:hover {
+      background: white;
+      color: $primary1;
+      text-decoration: none;
+      -webkit-transition: background .3s ease-in-out;
+      -moz-transition: background .3s ease-in-out;
+      -o-transition: background .3s ease-in-out;
+      transition: background .3s ease-in-out;
+    }
   }
 }
 
