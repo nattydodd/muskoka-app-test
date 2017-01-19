@@ -1,7 +1,7 @@
 <div class="container-fluid all-entries">
 
   <div class="row">
-    <div class="col-md-7 col-md-offset-1 entry-top-text">
+    <div class="col-md-7 col-md-offset-1 col-sm-7 col-sm-offset-1 entry-top-text">
       <h1>CAST YOUR VOTE</h1>
       <h4>Donec bibendum accumsan fringilla. Sed quam magna, viverra sit amet volutpat blandit, consequat in nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</h4>
       <br>
@@ -10,7 +10,7 @@
         <%= link_to "SUBMIT YOUR ENTRY", new_entry_path(current_user), class:"button-main" %>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-3">
       <img id="logo-vote" src="http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg">
     </div>
   </div>
@@ -19,7 +19,7 @@
     <% @entries.in_groups_of(4, false).each do |group| %>
       <div class="row">
         <% group.each do |entry| %>
-            <div class="col-md-3 all-images" data-link="<%= entry_path(entry) %>">
+            <div class="col-md-3 col-sm-6 col-xs-12 all-images" data-link="<%= entry_path(entry) %>">
               <% if entry.filter %>
                 <%= link_to image_tag(entry.filter) %>
               <% else %>
