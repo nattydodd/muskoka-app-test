@@ -15,13 +15,19 @@
 
       <div class="row">
         <div class="field col-md-5 col-sm-5 col-xs-11 fake-button">
-          <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"> <br/>
-          <span class="carrierwave-wave-field">
-            <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
-            <h1>Select File</h1>
-            <p>Image size should be: [TBD]</p>
+          <div class="carrierwave-wave-field">
             <%= f.file_field :avatar, id: "avatar-upload" %>
-          </span>
+            <% if @entry.filter %>
+              <%= image_tag @entry.filter, id: "img_prev", class:"img-thumbnail", alt:"your image" %>
+            <% elsif @entry.avatar_url %>
+              <%= image_tag @entry.avatar_url, id: "img_prev", class:"img-thumbnail", alt:"your image" %>        
+            <% else %>
+            <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"> <br/>
+            <i class="fa fa-camera-retro" id="camera-upload" aria-hidden="true"></i>
+            <% end %>
+            <h1 class="black-text">Select File</h1>
+            <p class="white-text">Image size must be at least 800px wide by 400px in height.</p>
+          </div>
         </div>
 
         <div class="field col-md-6 col-sm-6 col-xs-11">

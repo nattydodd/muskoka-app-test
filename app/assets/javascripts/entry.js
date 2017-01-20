@@ -1,4 +1,4 @@
-$(function() {
+$( document ).on('turbolinks:load', function() {
 
   // if (window.location.href.indexOf("entries") > -1) {
   //   $(".navbar-right").addClass("dark-nav");
@@ -8,6 +8,7 @@ $(function() {
 
   // showing image preview
         function readURL(input) {
+          console.log("reading input");
           if (input.files && input.files[0]) {
             var reader = new FileReader();
 
@@ -19,6 +20,7 @@ $(function() {
         }
 
         $("#avatar-upload").change(function(){
+          console.log("changing");
           $('#img_prev').removeClass('hidden');
           readURL(this);
           $('#camera-upload').css("display", "none");
@@ -26,7 +28,9 @@ $(function() {
 
 
 
-if (window.location.href.indexOf("users") > -1) {
+
+
+if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length === 0) {
     // get the url of the entry image
     const URL = $('#entry_image img').attr('src');
     console.log(URL);

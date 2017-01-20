@@ -88,13 +88,30 @@ textarea {
   margin-top: 0;
 }
 
+.white-text {
+  color: white;
+  font-family: $font-regular;
+}
+
+.black-text {
+  color:black !important;
+  font-family: $font-regular;
+}
+
 #camera-upload {
   margin-top: 50px;
   font-size: 120px !important;
+  color: white;
+}
+
+#avatar-upload {
+  height: 400px;
+  position: absolute;
 }
 
 .fake-button {
   text-align: center;
+  // color: black;
 }
 
 .edit-photo img {
