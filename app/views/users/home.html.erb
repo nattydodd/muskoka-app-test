@@ -135,7 +135,18 @@
     <div class="row flex-md-middle">
     <% @entries.offset(2).last(2).each do |entry| %>
       <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
-        <%= image_tag(entry.filter) %>
+
+        <% if entry.filter %>
+        <style>
+          #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        </style>
+        <% else %>
+        <style>
+          #image<%= entry.id %> { background-image: url(<%= entry.avatar_url %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        </style>
+        <% end %>
+
+        <%#= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
@@ -153,7 +164,18 @@
     <div class="row flex-md-bottom">
     <% @entries.offset(4).last(2).each do |entry| %>
       <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
-        <%= image_tag(entry.filter) %>
+
+        <% if entry.filter %>
+        <style>
+          #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        </style>
+        <% else %>
+        <style>
+          #image<%= entry.id %> { background-image: url(<%= entry.avatar_url %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        </style>
+        <% end %>
+
+        <%#= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
