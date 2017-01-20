@@ -167,7 +167,7 @@ $secondary4: #e5e3e3;
 }
 
 #entry_image img {
-  max-width: 600px;
+  max-width: 100%;
   margin-top: 40px;
   border: 5px solid $secondary4;
   border-radius: 5px;
@@ -179,6 +179,7 @@ $secondary4: #e5e3e3;
 
 .story-column {
   margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 #save-filter {
@@ -187,12 +188,12 @@ $secondary4: #e5e3e3;
   display: block;
   margin-bottom: 40px;
   margin-top: 10px;
-  background: $secondary1;
+  // background: $secondary1;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 2rem;
-  color: $secondary4;
-  border: none;
+  // color: $secondary4;
+  // border: none;
 }
 
 .buttons-container {

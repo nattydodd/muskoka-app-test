@@ -90,7 +90,13 @@
 </div>
 
 
-    <div class="col-md-6 col-md-offset-1">
+
+<!-- end of main container div -->
+
+<div class="container-fluid filter-background">
+  <div class="row">
+
+    <div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1">
       <div id="entry_image">
         <%= image_tag(@user.entry.avatar_url) %>
       </div>
@@ -107,22 +113,17 @@
       <% if @user.entry %>
         <%= form_for @user.entry, :method => :PUT do |f| %>
           <%= f.hidden_field :filter, id: "hidden-filter-send" %>
-          <%= f.submit 'Save Filter', id: "save-filter" %>
+          <%= f.submit 'Save Filter', id: "save-filter", class: "button-main" %>
         <% end %>
       <% end %>
       <!-- end of form -->
     </div>
 
-<!-- end of main container div -->
-
-<div class="container-fluid filter-background">
-
-      <div class="row">
-        <div class="col-md-5 story-column">
+        <div class="col-md-4 col-sm-4 story-column">
           <div class="story">
             <%= @user.entry.story %>
           </div>
-          <div class="submit-button">
+          <div class="submit-button button-red">
             <%= link_to 'Edit Entry', edit_entry_path(@user.entry) %>
           </div>
           <div class="vote-count">
@@ -152,7 +153,7 @@
       <div class="container-fluid challenge-section">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <div class="test-your-knowledge">
+            <div class="challenge-friends">
               <h2>CHALLENGE YOUR FRIENDS FOR 5 EXTRA VOTES</h2>
               <button>SHARE CHALLENGE</button>
             </div>
