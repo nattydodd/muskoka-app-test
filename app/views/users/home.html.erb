@@ -102,8 +102,19 @@
   <section class="container-fluid entries-last-six">
     <div class="row flex-md-top">
     <% @entries.last(2).each do |entry| %>
-      <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
-        <%= image_tag(entry.filter) %>
+      <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
+
+      <% if entry.filter %>
+      <style>
+        #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+      </style>
+      <% else %>
+      <style>
+        #image<%= entry.id %> { background-image: url(<%= entry.avatar_url %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+      </style>
+      <% end %>
+        <%#= image_tag(entry.filter) %>
+        <%#= cl_image_tag(entry.filter, :width => 800, :height => 400, :crop => "fill") %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
           <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
