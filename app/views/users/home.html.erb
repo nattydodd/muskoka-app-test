@@ -134,7 +134,7 @@
     </div>
     <div class="row flex-md-middle">
     <% @entries.offset(2).last(2).each do |entry| %>
-      <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
+      <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
 
         <% if entry.filter %>
         <style>
@@ -163,7 +163,7 @@
     </div>
     <div class="row flex-md-bottom">
     <% @entries.offset(4).last(2).each do |entry| %>
-      <div class="col-md-6 image-block" data-link="<%= entry_path(entry) %>">
+      <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
 
         <% if entry.filter %>
         <style>
