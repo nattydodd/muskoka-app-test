@@ -359,7 +359,7 @@ $secondary4: #e5e3e3;
 
 .tourism-bottom {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
-  height: 500px;
+  height: 550px;
     h1 {
       margin-top: 0;
       padding: 80px 0 40px;
@@ -367,19 +367,17 @@ $secondary4: #e5e3e3;
       font-family: $font-regular;
       text-align: center;
       font-size: 4rem;
-      letter-spacing: 0.3rem;
-    }
-    h4 {
-      color: $secondary4;
-      letter-spacing: 0.15rem;
-      font-weight: 300;
+      font-weight: 700;
+      text-transform: uppercase;
+      // letter-spacing: 0.3rem;
     }
     h3 {
       color: $secondary4;
-      border: 2px solid $secondary4;
-      padding: 5px 10px;
+      // letter-spacing: 0.15rem;
+      font-weight: 300;
+    }
+    .button-container {
       text-align: center;
-      letter-spacing: 0.2rem;
     }
 }
 
@@ -612,6 +610,9 @@ $secondary4: #e5e3e3;
   }
   .enter-to-win h1 {
     font-size: 8vw;
+  }
+  .tourism-bottom {
+    height: 740px;
   }
 }
 
