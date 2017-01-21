@@ -84,6 +84,7 @@ $secondary4: #e5e3e3;
     font-family: $font-regular;
     font-weight: 700;
     margin-bottom: 30px;
+    margin: 0;
   }
   h3 {
     color: white;
@@ -154,6 +155,11 @@ $secondary4: #e5e3e3;
   line-height: 1;
 }
 
+.instructions-small {
+  line-height: 1;
+  margin-top: 10px;
+}
+
 .actions {
   margin: auto;
   display: block;
@@ -188,12 +194,14 @@ $secondary4: #e5e3e3;
 .board-text {
   position: absolute;
   margin-top: 200px;
+  text-align: center;
   h1 {
     text-align: center;
     color: $primary2;
     font-family: $font-regular;
     font-weight: 700;
     font-size: 6rem;
+    margin-bottom: 30px;
   }
   h2 {
     text-align: center;
@@ -377,6 +385,42 @@ $secondary4: #e5e3e3;
 
 //media quieries for home page
 
+@media (min-width: 2250px) {
+  .bracket-text {
+    width: 45%;
+    left: 9%
+  }
+}
+
+@media (min-width: 2000px) and (max-width: 2249px) {
+  .bracket-text {
+    width: 56%;
+    margin-top: 20px;
+    left: 12%;
+  }
+}
+
+@media (min-width: 2001px) {
+  .green-board {
+    height: 700px;
+    background-size: 54%;
+  }
+  .board-text {
+    h2 {
+      font-size: 7rem;
+    }
+    h1 {
+      font-size: 9rem;
+    }
+  }
+  .all-images a img {
+    max-width: 800px;
+  }
+  .button-main {
+    font-size: 3rem;
+  }
+}
+
 @media (max-width: 2000px) {
   .green-board {
     background-size: 60%;
@@ -416,6 +460,12 @@ $secondary4: #e5e3e3;
  }
 }
 
+@media (min-width: 1300px) {
+  .bracket-text {
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 1200px) {
   .board-text {
     margin-top: 110px;
@@ -423,12 +473,18 @@ $secondary4: #e5e3e3;
   .green-board {
     height: 400px;
   }
-  .board-text h2 {
+  .board-text {
+    h2 {
     font-size: 3.5rem;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
   }
   .bracket-text {
     margin-left: 35px;
   }
+
 }
 
 @media (max-width: 1070px) {
@@ -566,10 +622,25 @@ $secondary4: #e5e3e3;
   .green-board {
     height: 300px;
   }
+  .brackets {
+    padding: 0 !important;
+  }
   .board-text {
-    padding-top: 100px;
+    padding-top: 80px;
     h1 {
       margin: 0;
+      margin-bottom: 20px;
     }
+  }
+  .bracket-text {
+    width: 100%;
+    margin: 0 10px;
+    h3 {
+      font-size: 3.0vw;
+      width: 113%;
+    }
+  }
+  .button-main {
+    font-size: 1.5rem;
   }
 }
