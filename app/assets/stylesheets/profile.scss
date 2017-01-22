@@ -32,6 +32,18 @@ $secondary4: #e5e3e3;
    font-size: 3rem !important;
 }
 
+.this-is.profile img {
+  max-width: 800px;
+  margin-left: 20px;
+}
+
+.this-is-row.profile {
+  padding-top: 100px;
+  -ms-transform: rotate(-10deg); /* IE 9 */
+  -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+  transform: rotate(-10deg);
+}
+
 .take-the-quiz {
   // height: 400px;
   // background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407526/Entries_Board_nq7d9b.png");
@@ -212,5 +224,20 @@ $secondary4: #e5e3e3;
   }
   #logo-vote {
     display: none;
+  }
+  .this-is.profile img {
+    max-width: 500px;
+  }
+  .this-is-row.profile {
+    padding-top: 55px;
+  }
+}
+
+@media (max-width: 500px) {
+  .this-is-row.profile {
+    padding-top: 115px;
+  }
+  .this-is.profile img {
+    margin-left: 0;
   }
 }

@@ -7,6 +7,8 @@ $secondary1: #574942;
 $secondary2: #3f9989;
 $secondary3: #396370;
 $secondary4: #e5e3e3;
+$darkgrey: #2c2d2d;
+
 
 .text-link {
   color: $primary3;
@@ -29,7 +31,13 @@ $secondary4: #e5e3e3;
 .navbar-brand {
   padding: 2px 10px !important;
   img {
-    max-width: 55px;
+    // max-width: 55px;
+    position: absolute;
+    left: 10px;
+    width: 125px;
+    box-shadow: 1px 1px 7px rgba(44, 45, 45, 0.42);
+    top: 10px;
+    background: rgb(255, 255, 255);
   }
 }
 
@@ -40,7 +48,7 @@ $secondary4: #e5e3e3;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
-  color: $primary1;
+  color: $darkgrey;
 }
 
 .navbar-default {
@@ -54,7 +62,7 @@ $secondary4: #e5e3e3;
 }
 
 .navbar-default .navbar-nav>li>a{
-  color: #525151 !important;
+  color: $darkgrey !important;
   &:hover {
     cursor: pointer;
   }

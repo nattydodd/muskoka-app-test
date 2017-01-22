@@ -7,6 +7,7 @@ $secondary1: #574942;
 $secondary2: #3f9989;
 $secondary3: #396370;
 $secondary4: #e5e3e3;
+$darkgrey: #2c2d2d;
 
 
 .entry-top {
@@ -79,7 +80,7 @@ $secondary4: #e5e3e3;
 }
 
 .entry-photo-step {
-  background: #2c2d2d;
+  background: $darkgrey;
   padding: 40px;
 }
 
