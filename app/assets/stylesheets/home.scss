@@ -93,7 +93,7 @@ $secondary4: #e5e3e3;
 }
 
 .your-adventure {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg");
   height: 600px;
   background-size: cover;
   overflow: hidden;
@@ -111,11 +111,11 @@ $secondary4: #e5e3e3;
 }
 
 .how-to-win {
-  background: #272928;
-  color: $secondary4;
+  background: #a9a9a9;;
+  color: white;
   font-family: $font-regular;
   .wrapper {
-    margin: 60px 0;
+    margin: 100px 0;
   }
   h1 {
     font-weight: 700;
@@ -123,11 +123,19 @@ $secondary4: #e5e3e3;
     font-size: 4.5rem;
   }
   p {
-    font-size: 16px;
+    font-size: 17px;
   }
   hr {
     border-top: 2px solid rgba(238, 238, 238, 0.29);
   }
+  // .prize {
+  //   color: $primary1;
+  // }
+}
+
+.polaroid-home {
+  max-width: 350px;
+  padding-bottom: 30px;
 }
 
 .entry-instructions {
@@ -633,12 +641,24 @@ $secondary4: #e5e3e3;
   }
   .bracket-text h1 {
     margin-top: 10px;
+
   }
   .bracket-text {
     width: 92%;
   }
   .brackets {
     margin-top:45px;
+  }
+  .brackets img {
+    display: none;
+  }
+  .bracket-text {
+    h1 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 18px;
+    }
   }
   .board-text {
     h2 {
@@ -656,10 +676,13 @@ $secondary4: #e5e3e3;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 510px) {
   .your-adventure {
-    height: 340px;
+    height: 480px;
   }
+}
+
+@media (max-width: 450px) {
   .green-board {
     height: 300px;
   }
@@ -676,10 +699,10 @@ $secondary4: #e5e3e3;
   .bracket-text {
     width: 100%;
     margin: 0 10px;
-    h3 {
-      font-size: 3.0vw;
-      width: 113%;
-    }
+    // h3 {
+    //   font-size: 3.0vw;
+    //   width: 113%;
+    // }
   }
   .button-main {
     font-size: 1.5rem;

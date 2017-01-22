@@ -62,7 +62,7 @@ $secondary4: #e5e3e3;
     color: white;
   }
   &:before {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(35, 35, 39, 0.5);
     content: "";
     position: absolute;
     left: 0;
@@ -90,7 +90,7 @@ $secondary4: #e5e3e3;
 
 
 .about-spa, .about-stay, .about-beer {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Section2_Background_ct7a77.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -105,9 +105,9 @@ $secondary4: #e5e3e3;
   }
 }
 
-.about-stay {
-    border-top: 21px solid rgba(47, 47, 46, 0.1);
-}
+// .about-stay {
+//     border-top: 21px solid rgba(47, 47, 46, 0.1);
+// }
 
 .intro-text-wrapper {
   margin-top: 150px;
