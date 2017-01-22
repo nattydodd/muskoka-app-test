@@ -9,27 +9,78 @@ $secondary3: #396370;
 $secondary4: #e5e3e3;
 
 
-.entry-instructions {
-  padding-top: 100px;
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483465726/pwtdhl4jqxknukedahee.png");
+.entry-top {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485121981/canoe-stock_okhlbf.jpg");
   background-size: cover;
-  h3 {
-    color: $primary1;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.entry-row {
+  padding-top: 150px;
+}
+
+.photo-column {
+  text-align: center;
+}
+
+.entry-instructions {
+
+  h2 {
+    color: black;
     font-family: $font-regular;
-    font-weight: 300;
+    font-weight: 700;
     text-align: center;
   }
-  h2 {
-    color: $primary1;
+  h1 {
+    font-family: $font-regular;
+  }
+  // h2 {
+  //   color: white;
+  //   font-family: $font-regular;
+  //   font-weight: 300;
+  //   text-align: right;
+  // }
+}
+
+#suyc-entry {
+  max-width: 400px;
+}
+
+.step {
+  text-align: center;
+  h3 {
     font-family: $font-regular;
     font-weight: 300;
-    text-align: right;
   }
 }
+
+.step-row {
+  margin-top: 50px;
+}
+
 
 .entry-top {
   padding-bottom: 80px;
   padding-top: 40px;
+  overflow: hidden;
+  position: relative;
+  height: 600px;
+
+  &:before {
+    background-color: rgba(0, 0, 0, 0.29);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.entry-photo-step {
+  background: #2c2d2d;
+  padding: 40px;
 }
 
 .fa-camera-retro, .fa-upload, .fa-pencil-square-o, .fa-clone, .fa-paperclip, .fa-smile-o {
@@ -150,5 +201,16 @@ textarea {
 @media (max-width: 767px) {
   .edit-photo {
     padding-top:50px;
+  }
+  .entry-row {
+    padding-top: 50px;
+  }
+  .entry-top {
+    h2 {
+    color: white;
+    }
+  }
+  .vertical-text {
+    margin-top: 30px !important;
   }
 }
