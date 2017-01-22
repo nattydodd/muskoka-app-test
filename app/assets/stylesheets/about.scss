@@ -10,7 +10,11 @@ $secondary4: #e5e3e3;
 
 
 .about-main {
-  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407530/EnterToWin_Background_gvafys.jpg");
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407521/Footer_Background_amx84q.jpg");
+  h1, h3, p {
+    color: white;
+    font-family: $font-regular;
+  }
 }
 
 .about-section-one {
@@ -18,4 +22,24 @@ $secondary4: #e5e3e3;
   h1 {
     color: $secondary4;
   }
+}
+
+.polaroid {
+  max-width: 450px;
+}
+
+.intro-wrapper {
+  margin: 30px 0;
+}
+
+.about-hero {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483464779/qonxfggeudzrt57xbl2u.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-intro, .about-paddle, .about-golf {
+  background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407524/Entries_Background_sbutxk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
