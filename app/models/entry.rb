@@ -10,7 +10,7 @@ class Entry < ApplicationRecord
 
   after_update :clear_filtered_image
 
-  validates :title, length: { maximum: 32 }
+  validates :title, length: { maximum: 30 }
   validates :story, length: { maximum: 1500 }
   validates :title, presence: true
   validates :story, presence: true

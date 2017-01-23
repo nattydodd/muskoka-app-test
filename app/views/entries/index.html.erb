@@ -27,7 +27,13 @@
               <% end %>
               <div class="hover-content-smaller-top">
                 <span class="hover-user smaller"><%= entry.user.name %></span><br>
-                <span class="hover-title smaller">TITLE HEADER POST</span><br>
+                <span class="hover-title smaller">
+                  <% if entry.title %>
+                    <%= entry.title %>
+                  <% else %>
+                    This is my Canada
+                  <% end %>
+                </span><br>
                 <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span>
               </div>
               <div class="hover-content-smaller">

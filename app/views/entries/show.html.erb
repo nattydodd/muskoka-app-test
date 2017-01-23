@@ -41,7 +41,11 @@
       <% end %>
     </div>
     <div class="col-md-5 col-sm-5 entry-story">
-      <h1>Story Title</h1>
+      <% if @entry.title %>
+      <h1><%= @entry.title %></h1>
+      <% else %>
+      <h1>This is my Canada</h1>
+      <% end %>
       <%= @entry.story %>
       <h4><em>- <%= @entry.name %></em></h4>
     </div>

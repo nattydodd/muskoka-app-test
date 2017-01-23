@@ -68,6 +68,10 @@ $darkgrey: #2c2d2d;
   }
 }
 
+.navbar-collapse {
+  float: right;
+}
+
 .navbar-default .navbar-nav>li {
   &:focus, &:hover {
     background: gainsboro;

@@ -137,7 +137,13 @@
         <%#= cl_image_tag(entry.filter, :width => 800, :height => 400, :crop => "fill") %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
-          <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
+          <span class="hover-title"><h3>
+            <% if entry.title %>
+            <%= entry.title %>
+            <% else %>
+            This is my Canada
+            <% end %>
+          </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
         </div>
         <div class="hover-content-bottom">
@@ -169,7 +175,13 @@
         <%#= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
-          <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
+          <span class="hover-title"><h3>
+            <% if entry.title %>
+            <%= entry.title %>
+            <% else %>
+            This is my Canada
+            <% end %>
+          </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
         </div>
         <div class="hover-content-bottom">
@@ -201,7 +213,13 @@
         <%#= image_tag(entry.filter) %>
         <div class="hover-content-top">
           <span class="hover-user"><%= entry.user.name %></span><br>
-          <span class="hover-title"><h3>TITLE HEADER POST</h3></span><br>
+          <span class="hover-title"><h3>
+            <% if entry.title %>
+            <%= entry.title %>
+            <% else %>
+            This is my Canada
+            <% end %>
+          </h3></span><br>
           <span class="hover-votes"><h3><i class="fa fa-heart-o" aria-hidden="true"></i><%= entry.votes.where(email_confirmed: true).count %> VOTES </h3></span><br>
         </div>
         <div class="hover-content-bottom">
