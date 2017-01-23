@@ -67,23 +67,23 @@
 
     <%= yield %>
 
-    <section id="footer" style="background-color:#292b34;">
+    <section id="footer" class="footer">
             <div class="container">
-        		<center style="color:#fff;">
+        		<center>
         		<div class="container">
-        		    <div class="well well-sm main-footer"  style="background-color:#292b34; border:0px">
+        		    <div class="well-sm main-footer">
         		        <div class="row">
         		            <div class="col-md-12">
         		                <div class="row footer-row">
         		                    <div class="col-md-4 left-side">
         		                        <h4 class="title-footer">
         		                            Questions? Please contact us.</h4>
-                                        <h4>T: (416) 123-4567</h4>
-                                        <h4>E: xxxxxx@gmail.com</h4>
+
+                                        <h4>E: <a href="mailto:xxxxx@muskoka.com">xxxxxx@gmail.com</a></h4>
+                                        <h4>T: <a href="#">(416) 123-4567</a></h4>
         		                    </div><!--end .col-md-4-->
         		                    <div class="col-md-4 contact-email">
-        		                        <h4>
-        		                            <a href="mailto:xxxxx@muskoka.com">xxxxx@muskoka.com</a></h4>
+
         		                        <h4>
         		                            © Copyright Show Us Your Canada 2017</h4>
                                         <a href="http://instagram.com/" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -92,7 +92,8 @@
         		                    </div><!--end .col-md-4 .contact-email-->
         		                    <div class="col-md-4">
         		                        <div class="row contact row-first">
-
+                                        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485149140/white_ee_atvb4d.png", class:"ee") %>
+                                        <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485148734/ontario_white_on_black_uei7oe.png") %>
         		                        </div><!--end .row .contact-->
         		                    </div><!--end .col-md-6-->
         		                </div><!--end .row-->

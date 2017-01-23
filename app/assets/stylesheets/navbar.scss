@@ -130,7 +130,7 @@ $darkgrey: #2c2d2d;
 .footer {
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: $darkgrey;
+  background-color: $primary2;
   h1 {
     margin-top: 0;
     padding: 80px 0 40px;
@@ -182,9 +182,25 @@ $darkgrey: #2c2d2d;
 
 .footer-row {
   margin-top: 30px;
+  margin-bottom: 30px;
   font-family: $font-regular;
+  a {
+    color: $secondary4;
+    &:hover {
+      text-decoration: none;
+      color: $darkgrey;
+    }
+  }
+  .ee {
+    max-width: 150px;
+  }
 }
 
 .left-side {
   text-align: left;
+  margin-top: 20px;
+}
+
+.contact-email {
+  margin-top: 20px;
 }
