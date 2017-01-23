@@ -18,11 +18,12 @@ $secondary4: #e5e3e3;
   h1 {
     margin-top: 5px;
     font-weight: 700;
+    font-size: 50px;
   }
 }
 
 .text-column {
-  margin-top: 120px;
+  margin-top: 50px;
 }
 
 .wood-column {
@@ -32,6 +33,10 @@ $secondary4: #e5e3e3;
   h3, h1 {
     color: white;
   }
+}
+
+.centered-polaroid {
+  text-align: center;
 }
 
 .about-section-one {
@@ -88,6 +93,12 @@ $secondary4: #e5e3e3;
   }
 }
 
+.about-paddle {
+  .text-column {
+    margin-top: 20px;
+  }
+}
+
 
 .about-spa, .about-stay, .about-beer {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485119460/Section2_Background_02_ts44ed.jpg");
@@ -120,4 +131,35 @@ $secondary4: #e5e3e3;
   height: 600px;
   background-position: center;
   text-align: center;
+}
+
+@media (min-width: 991px) {
+  .about-paddle {
+    .text-column {
+      margin-top: 70px;
+    }
+  }
+
+}
+
+@media (max-width: 990px) {
+  .text-column {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .polaroid {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .text-column {
+    margin: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .intro-container {
+    margin-bottom: 150px;
+  }
 }
