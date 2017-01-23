@@ -4,8 +4,11 @@
       var currentPage = $(location).attr('pathname').split('/').pop();
       var currentPageBase = $(location).attr('pathname').split('/')[1];
       console.log(currentPageBase);
+      console.log(currentPage);
 
-      if(isNaN(currentPage)){
+      if(currentPage == "edit") {
+        return false
+      } else if(isNaN(currentPage)){
 
         $('#navbar li').each(function () {
           var itemId = $(this).attr('id');

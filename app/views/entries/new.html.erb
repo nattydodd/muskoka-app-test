@@ -93,10 +93,10 @@
 <div class="container-fluid already-submitted">
   <div class="row already-submit-row">
     <div class="col-md-11 col-md-offset-1 col-sm-10 col-sm-offset-1">
-      <% if @user.entry %>
+      <% if current_user.entry %>
         <h1> You have already submitted an entry for this contest.<br>
         <div class="submit-button button-main">
-           <%= link_to 'VIEW MY ENTRY', @user %>
+           <%= link_to 'VIEW MY ENTRY', current_user %>
         </div>
       <% else %>
 
