@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/about' => 'users#about'
 
-  resources :users
+  resources :users, only: [:new, :create, :update, :edit, :show, :destroy]
 
   resources :entries do
     resources :votes, only: [:create, :destroy] do
