@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+@font-face {
+  font-family: "TrueNorthBlack";
+  src: url("https://db.onlinewebfonts.com/t/6257dc172f1ac66d3178e649706bac48.eot");
+  src: url("https://db.onlinewebfonts.com/t/6257dc172f1ac66d3178e649706bac48.eot?#iefix") format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/6257dc172f1ac66d3178e649706bac48.woff2") format("woff2"),
+  url("https://db.onlinewebfonts.com/t/6257dc172f1ac66d3178e649706bac48.woff") format("woff"),
+  url("https://db.onlinewebfonts.com/t/6257dc172f1ac66d3178e649706bac48.ttf") format("truetype"),
+  url("https://db.onlinewebfonts.com/t/6257dc172f1ac66d3178e649706bac48.svg#TrueNorthScriptW00-Regular") format("svg");
+}
+
 $font-regular: 'Work Sans', sans-serif;
 $font-this-is: 'Passion One', cursive;
 $primary1: #4a5159;
@@ -175,6 +186,7 @@ $darkgrey: #2c2d2d;
   font-family: $font-this-is;
   color: $secondary4;
   text-transform: uppercase;
+  // font-family: "TrueNorthBlack";
 }
 
 .left-bracket {

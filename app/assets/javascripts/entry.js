@@ -30,7 +30,7 @@ $( document ).on('turbolinks:load', function() {
 
 
 
-if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length === 0) {
+if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length === 0 && $('buttons-container').length > 0 ) {
     // get the url of the entry image
     const URL = $('#entry_image img').attr('src');
     console.log(URL);
@@ -43,10 +43,10 @@ if (window.location.href.indexOf("users") > -1 && $('.create-your-entry').length
     $('.filter-button').on('click', function() {
 
       // get the name of the filter and add e_art: to it
-      var filterName = 'e_art:' + $(this).html() + '/';
+      var filterName = 'e_art:' + $(this).data("filter") + '/';
 
       // add the filter to the middle of it
-      var filtered = FIRST + "upload/w_300,g_north_west,x_20,y_20,l_MyCanada-01_xpwb69/" + filterName + LAST
+      var filtered = FIRST + "upload/w_300,g_north_west,x_20,y_20,l_MyCanada-01_copy_sc33qn/" + filterName + LAST
 
       // assign it to the image
       $('#entry_image img').attr('src', filtered );

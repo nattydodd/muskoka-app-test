@@ -11,6 +11,7 @@ $secondary1: #574942;
 $secondary2: #3f9989;
 $secondary3: #396370;
 $secondary4: #e5e3e3;
+$darkgrey: #2c2d2d;
 
 .top-section {
   background-image: url("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483407510/MainSection_Background_kiehbd.jpg");
@@ -706,5 +707,17 @@ $secondary4: #e5e3e3;
   }
   .button-main {
     font-size: 1.5rem;
+  }
+  .row-first {
+    margin-top: 30px;
+  }
+  .footer h4 {
+    font-size: 13px;
+  }
+  .navbar-brand img {
+    width: 90px !important;
+  }
+  .how-to-win {
+    color: white;
   }
 }

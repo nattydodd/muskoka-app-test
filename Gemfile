@@ -32,6 +32,8 @@ gem 'mini_magick', '~> 4.3'
 #
 gem 'cloudinary'
 
+gem "lazyload-rails"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
