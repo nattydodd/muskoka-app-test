@@ -73,6 +73,7 @@ class EntriesController < ApplicationController
     @entry.assign_attributes(entry_params)
       if @entry.avatar_changed?
         @entry.filter = nil
+        @entry.filter_no_hashtag = nil
       end
 
       if @entry.save
@@ -95,7 +96,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:name, :story, :user_id, :avatar, :filter, :title)
+    params.require(:entry).permit(:name, :story, :user_id, :avatar, :filter, :title, :filter_no_hashtag)
   end
 
 

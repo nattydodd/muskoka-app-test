@@ -124,9 +124,9 @@
     <% @entries.last(2).each do |entry| %>
       <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
 
-      <% if entry.filter %>
+      <% if entry.filter_no_hashtag %>
       <style>
-        #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
+        #image<%= entry.id %> { background-image: url(<%= entry.filter_no_hashtag %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
       </style>
       <% else %>
       <style>

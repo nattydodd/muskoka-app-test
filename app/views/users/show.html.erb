@@ -108,6 +108,7 @@
       <% if @user.entry %>
         <%= form_for @user.entry, :method => :PUT do |f| %>
           <%= f.hidden_field :filter, id: "hidden-filter-send" %>
+          <%= f.hidden_field :filter_no_hashtag, id: "hidden-filter-no-hashtag" %>
           <%= f.submit 'Save Filter', id: "save-filter", class: "button-main" %>
         <% end %>
       <% end %>
