@@ -5,7 +5,7 @@
       <div class="row">
         <div class="logo col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
           <div class="hero-images">
-            <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1483451983/RTO12Logo_Angled-01_a4euwt.svg") %>
+            <%= image_tag("http://res.cloudinary.com/dx3z90dgl/image/upload/v1485797844/RTO12Logo_Angled_NEW-01_m8ufwu.svg") %>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
     <% @entries.offset(2).last(2).each do |entry| %>
       <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
 
-        <% if entry.filter %>
+        <% if entry.filter_no_hashtag %>
         <style>
           #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
         </style>
@@ -200,7 +200,7 @@
     <% @entries.offset(4).last(2).each do |entry| %>
       <div class="col-md-6 image-block" id="image<%= entry.id %>" data-link="<%= entry_path(entry) %>">
 
-        <% if entry.filter %>
+        <% if entry.filter_no_hashtag %>
         <style>
           #image<%= entry.id %> { background-image: url(<%= entry.filter %>); background-size: cover; height: 400px; background-repeat: no-repeat; background-position: center center;}
         </style>

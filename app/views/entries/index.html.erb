@@ -20,8 +20,8 @@
       <div class="row">
         <% group.each do |entry| %>
             <div class="col-md-3 col-sm-6 col-xs-12 all-images" data-link="<%= entry_path(entry) %>">
-              <% if entry.filter %>
-                <%= link_to image_tag(entry.filter), lazy: true %>
+              <% if entry.filter_no_hashtag %>
+                <%= link_to image_tag(entry.filter_no_hashtag), lazy: true %>
               <% else %>
                 <%= link_to image_tag(entry.avatar_url), lazy: true %>
               <% end %>
